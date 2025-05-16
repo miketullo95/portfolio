@@ -526,6 +526,79 @@ section#home {
   color: var(--text-secondary);
 }
 
+/* Project Button Enhancement Styles */
+
+/* Enhance project buttons to make them more prominent */
+.project-card .project-info .btn {
+  /* Remove the small size and make it more prominent */
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  display: inline-block;
+  
+  /* Add a gradient background */
+  background: linear-gradient(to right, var(--accent), #a370f7);
+  color: #fff;
+  border: none;
+  
+  /* Enhance hover effects */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 4px 15px rgba(189, 147, 249, 0.2);
+}
+
+.project-card .project-info .btn:hover,
+.project-card .project-info .btn:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(189, 147, 249, 0.4);
+}
+
+.project-card .project-info .btn:hover::before,
+.project-card .project-info .btn:focus::before {
+  left: 100%;
+}
+
+/* Add a subtle bounce animation when buttons come into view */
+@keyframes buttonPop {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.project-card.fadeIn .btn {
+  animation: buttonPop 0.5s ease forwards;
+  animation-delay: 0.3s; /* Delay to show after card appears */
+}
+
+/* Ensure accessibility for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .project-card .project-info .btn:hover,
+  .project-card .project-info .btn:focus {
+    transform: none;
+    box-shadow: 0 4px 15px rgba(189, 147, 249, 0.3);
+  }
+  
+  .project-card .project-info .btn:hover::before,
+  .project-card .project-info .btn:focus::before {
+    display: none;
+  }
+  
+  .project-card.fadeIn .btn {
+    animation: none;
+    opacity: 1;
+  }
+}
 /* Resume Section */
 .resume .resume-content {
   display: flex;
@@ -894,7 +967,7 @@ section#home {
 
 /* Footer */
 footer {
-  padding: var(--spacing-md) 0;
+  padding: var(--spacing-sm) 0;
   background-color: var(--surface-light);
 }
 
