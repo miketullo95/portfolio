@@ -505,15 +505,147 @@ section#home {
 }
 
 /* Projects Section */
+/* Featured Project Styles */
+.featured-project {
+  background-color: var(--surface-light);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--spacing-xl);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Featured project image takes full width on mobile */
+.featured-project .project-img {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.featured-project .project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.featured-project .project-info {
+  padding: var(--spacing-md);
+}
+
+.featured-project .project-info h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.featured-project .project-info .project-tags {
+  color: var(--accent);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.featured-project .project-info p {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.featured-project .project-info .btn {
+  /* Make button more prominent than on regular cards */
+  padding: 0.8rem 1.8rem;
+  font-size: 1.1rem;
+  background: linear-gradient(to right, var(--accent), #a370f7);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(189, 147, 249, 0.3);
+  transition: all 0.3s ease;
+}
+
+.featured-project .project-info .btn:hover,
+.featured-project .project-info .btn:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(189, 147, 249, 0.5);
+}
+
+/* Project grid for non-featured projects (3 in a row on desktop) */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  /* Tablet view - 2 cards per row */
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* The third card spans full width in tablet view */
+  .project-grid .project-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Desktop view */
+  .featured-project {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  
+  .featured-project .project-img {
+    width: 50%;
+    height: auto;
+  }
+  
+  .featured-project .project-info {
+    width: 50%;
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* 3 cards in a row on desktop */
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Reset the last card to not span the whole row */
+  .project-grid .project-card:last-child {
+    grid-column: auto;
+    max-width: none;
+    margin: 0;
+  }
+}
+
+/* Ensure the original project card styles also apply */
+.projects .project-card {
+  background-color: var(--surface-light);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.projects .project-card:hover {
+  transform: translateY(-5px);
+}
 .projects {
   background-color: var(--surface);
 }
 
-.projects .project-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-lg);
-}
 
 @media (min-width: 992px) {
   .projects .project-grid {
