@@ -145,7 +145,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-sm) 0;
+  padding: var(--spacing-sm) 1em; /* Added left/right padding of 1em */
 }
 
 nav .logo {
