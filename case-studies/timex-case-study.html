@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timex Family Connect Case Study | Mike Tullo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/case-study.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
+    <style>
+        /* Video specific styles */
+        .case-study-video {
+            margin: var(--spacing-md) 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px 8px 0 0;
+            border: none;
+        }
+
+        .video-caption {
+            padding: var(--spacing-sm);
+            background-color: var(--surface-light);
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            border-radius: 0 0 8px 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to content link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="/" class="logo">Mike Tullo</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#projects">Projects</a></li>
+                <li><a href="/#resume">Resume</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <button class="burger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </button>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Case Study Header -->
+        <section class="case-study-header">
+            <div class="case-study-container">
+                <div class="case-study-banner">
+                    <img src="/img/timex-banner.jpg" alt="Timex Family Connect smartwatch and mobile app interface" />
+                </div>
+                <h1>Timex Family Connect</h1>
+                <p class="subtitle">Designing a seamless wearable experience connecting families through a child-friendly smartwatch</p>
+                
+                <div class="case-study-meta">
+                    <div class="meta-item">
+                        <h4>Role</h4>
+                        <p>UX Engineer</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Tools Used</h4>
+                        <p>Adobe XD, Zeplin, Jira</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Timeframe</h4>
+                        <p>8 Months</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Impact</h4>
+                        <p>100k+ downloads, 4.1/5 rating</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Case Study Content -->
+        <section class="case-study-content">
+            <div class="case-study-container">
+                <div class="case-study-section">
+                    <h2>Project Overview</h2>
+                    <p>Timex Family Connect is a smartwatch and companion mobile app designed to help parents stay connected with their children. The device offers GPS tracking, messaging, and scheduling features in a kid-friendly package. As the UX designer on this project, I was responsible for creating the end-to-end user experience for both the smartwatch interface and the companion iOS and Android applications.</p>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>Problem Statement</h2>
+                    <p>Parents want to give their children independence while ensuring their safety, but existing solutions were either too complex for children to use, lacked intuitive parent controls, or didn't provide the right balance of features and simplicity.</p>
+                    
+                    <p>The challenge was to create a wearable device and mobile application that would:</p>
+                    <ul>
+                        <li>Be intuitive and engaging for children ages 5-12</li>
+                        <li>Provide parents with peace of mind through location tracking and communication</li>
+                        <li>Balance functionality with simplicity in both the watch and app interfaces</li>
+                        <li>Create a seamless connection between the physical device and digital experience</li>
+                        <li>Differentiate from competitors through thoughtful UX and Timex's trusted brand</li>
+                    </ul>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>Research & Discovery</h2>
+                    
+                    <h3>Understanding the Users</h3>
+                    <p>We conducted extensive research to understand both primary user groups:</p>
+                    
+                    <div class="stats-block">
+                        <div class="stat-item">
+                            <div class="stat-number">24</div>
+                            <div class="stat-label">Parent interviews conducted</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">18</div>
+                            <div class="stat-label">Children participated in usability sessions</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Competitor products analyzed</div>
+                        </div>
+                    </div>
+                    
+                    <h3>Key Research Findings</h3>
+                    <ul>
+                        <li><strong>For Parents:</strong> Safety was the primary concern, followed by ease of use. Parents wanted reliable location tracking, simple communication, and quick access to critical functions.</li>
+                        <li><strong>For Children:</strong> Engagement and "cool factor" were essential. Children needed intuitive interfaces with minimal text, engaging visuals, and simple navigation.</li>
+                        <li><strong>Competitive Analysis:</strong> Existing products often prioritized features over usability, creating complex interfaces that frustrated both parents and children.</li>
+                    </ul>
+                    
+                    <div class="quote-block">
+                        <p>"I just want to know my kids are safe when they're at a friend's house or walking home from school. But most of these tracking devices are either too complicated or don't work reliably."</p>
+                        <cite>- Parent participant during user research</cite>
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>Design Process</h2>
+                    
+                    <div class="steps-container">
+                        <div class="step-line"></div>
+                        <div class="step-item">
+                            <h4>1. Define Requirements</h4>
+                            <p>Collaborated with product managers and engineers to identify technical constraints and feature priorities.</p>
+                        </div>
+                        <div class="step-item">
+                            <h4>2. User Personas & Scenarios</h4>
+                            <p>Created detailed personas for both parents and children, with realistic usage scenarios to guide design decisions.</p>
+                        </div>
+                        <div class="step-item">
+                            <h4>3. Information Architecture</h4>
+                            <p>Developed distinct information architectures for the watch interface and mobile app, optimizing each for their primary users.</p>
+                        </div>
+                        <div class="step-item">
+                            <h4>4. Wireframing</h4>
+                            <p>Created low-fidelity wireframes for key user flows, focusing on simplicity and intuitive navigation.</p>
+                        </div>
+                        <div class="step-item">
+                            <h4>5. Visual Design</h4>
+                            <p>Developed high-fidelity mockups with a child-friendly aesthetic for the watch and a clean, trustworthy design for the parent app.</p>
+                        </div>
+                        <div class="step-item">
+                            <h4>6. Prototyping & Testing</h4>
+                            <p>Built interactive prototypes and conducted usability testing with both parents and children.</p>
+                        </div>
+                        <div class="step-item">
+                            <h4>7. Refinement & Implementation</h4>
+                            <p>Iterated on designs based on feedback and worked closely with developers during implementation.</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Design Challenges</h3>
+                    
+                    <h4>Challenge 1: Designing for Small Screens</h4>
+                    <p>The watch face offered limited screen real estate, requiring extremely focused design decisions. We needed to create an interface that children could easily navigate while incorporating all necessary functionality.</p>
+                    
+                    <div class="case-study-image">
+                        <img src="/img/timex-watch-app.png" alt="Example of a small screen design" />
+                    </div>
+                    
+                    <h4>Challenge 2: Balancing Parent Control with Child Autonomy</h4>
+                    <p>We needed to give parents the oversight they needed while allowing children to feel like they had their own device, not just a tracking tool. This required thoughtful decisions about which features would be controllable by parents versus children.</p>
+                    
+                    <h4>Challenge 3: Creating Intuitive Communication</h4>
+                    <p>Many children in our target audience couldn't type efficiently. We developed a unique combination of pre-set messages, voice notes, and emojis to enable quick, engaging communication that worked for children of various ages and abilities.</p>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>Solution</h2>
+                    
+                    <h3>Watch Interface</h3>
+                    <p>The final smartwatch interface featured:</p>
+                    <ul>
+                        <li>Large, colorful icons and minimal text to support young users</li>
+                        <li>Swipe-based navigation to minimize the need for precise tapping</li>
+                        <li>Voice-first interaction for messaging and commands</li>
+                        <li>Playful animations and sounds to provide feedback and engagement</li>
+                        <li>Simplified settings that children could manage independently</li>
+                    </ul>
+                    
+                    <h3>Parent Mobile App</h3>
+                    <p>The companion mobile app was designed to provide parents with:</p>
+                    <ul>
+                        <li>An intuitive dashboard showing children's locations and status at a glance</li>
+                        <li>Simple messaging with conversation history and delivery confirmation</li>
+                        <li>Geofencing capabilities to create safe zones and receive alerts</li>
+                        <li>Family calendar and reminder functionality</li>
+                        <li>Device management and settings control</li>
+                    </ul>
+
+                    
+                    <h3>Key Features</h3>
+                    
+                    <h4>Location Tracking</h4>
+                    <p>Real-time GPS tracking with history, safe zones, and customizable alerts provided parents with peace of mind while maintaining a child-friendly presentation on the watch.</p>
+                    
+                    <h4>Communication Hub</h4>
+                    <p>A simplified messaging system allowed for voice messages, preset text responses, and emoji reactions. Parents could communicate directly with their children in a safe, controlled environment.</p>
+                    
+                    <h4>Family Calendar</h4>
+                    <p>Parents could set and manage schedules that would appear on their children's watches, helping establish routines and independence while maintaining oversight.</p>
+                    
+                    <h4>SOS Function</h4>
+                    <p>An easily accessible but protected emergency feature allowed children to quickly alert parents in case of an emergency, with automatic location sharing.</p>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>Testing & Iteration</h2>
+                    
+                    <p>Throughout the design process, we conducted multiple rounds of testing:</p>
+                    
+                    <h3>Prototype Testing</h3>
+                    <ul>
+                        <li>Early paper prototypes helped validate the information architecture</li>
+                        <li>Interactive prototypes in InVision allowed us to test navigation patterns</li>
+                        <li>Hardware prototypes with basic functionality tested the physical interaction model</li>
+                    </ul>
+                    
+                    <h3>Usability Testing</h3>
+                    <p>We conducted usability testing with 6 parent-child pairs, observing how they interacted with both the watch and the app. Key tasks included:</p>
+                    <ul>
+                        <li>Setting up the device and connecting it to the app</li>
+                        <li>Sending and receiving messages between parent and child</li>
+                        <li>Creating and managing safe zones</li>
+                        <li>Using the SOS function in a simulated emergency</li>
+                        <li>Managing schedules and reminders</li>
+                    </ul>
+                    
+                    <h3>Iterative Improvements</h3>
+                    <p>Based on testing feedback, we made several key improvements:</p>
+                    <ul>
+                        <li>Simplified the initial setup process to reduce parent frustration</li>
+                        <li>Enlarged touch targets on the watch interface after observing children's motor skills</li>
+                        <li>Added confirmation sounds and haptic feedback to improve interaction confidence</li>
+                        <li>Redesigned the messaging interface to prioritize voice messages over text</li>
+                        <li>Improved location update frequency based on parent feedback about reliability</li>
+                    </ul>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>Results & Impact</h2>
+                    
+                    <p>The Timex Family Connect launched successfully and has achieved significant marketplace success:</p>
+                    
+                    <div class="stats-block">
+                        <div class="stat-item">
+                            <div class="stat-number">100k+</div>
+                            <div class="stat-label">App downloads</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.1/5</div>
+                            <div class="stat-label">App store rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">1,500+</div>
+                            <div class="stat-label">Reviews</div>
+                        </div>
+                    </div>
+                    
+                    <div class="word-cloud">
+                        <h4>Common Phrases from User Reviews</h4>
+                        <div class="word-cloud-content">
+                            <span class="w-large">Easy to use</span>
+                            <span class="w-medium">Peace of mind</span>
+                            <span class="w-small">Great for kids</span>
+                            <span class="w-medium">Reliable</span>
+                            <span class="w-small">Safety</span>
+                            <span class="w-medium">Family friendly</span>
+                            <span class="w-small">Better than competitors</span>
+                            <span class="w-medium">Simple setup</span>
+                            <span class="w-small">Good battery life</span>
+                        </div>
+                    </div>
+                    
+                    <div class="quote-block">
+                        <p>"The Timex Family Connect has become an essential part of our family's daily routine. My kids love the independence it gives them, and I love knowing they're just a button press away."</p>
+                        <cite>- App Store Review</cite>
+                    </div>
+                </div>
+                <div class="case-study-video">
+                    <div class="video-container">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/xvn24w-eNzQ" title="Timex Family Connect Product Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="video-caption">Watch the official Timex Family Connect product demo showcasing the key features and functionality.</p>
+                </div>
+                <div class="case-study-section">
+                    <h2>Lessons Learned</h2>
+                    
+                    <h3>Designing for Dual User Groups</h3>
+                    <p>Creating an experience that served both parents and children required constant balancing of different needs, abilities, and expectations. The key was to optimize each interface for its primary user while ensuring seamless communication between them.</p>
+                    
+                    <h3>Hardware-Software Integration</h3>
+                    <p>Working with hardware constraints taught me valuable lessons about efficient interface design and the importance of close collaboration with engineering teams to understand technical limitations early in the process.</p>
+                    
+                    <h3>Simplicity vs. Functionality</h3>
+                    <p>The project reinforced that features should be carefully curated based on user needs rather than competitive pressure. By focusing on core functionality and executing it well, we created a more satisfying product than competitors with more features but poorer usability.</p>
+                    
+                    <h3>The Value of Iteration</h3>
+                    <p>Multiple rounds of testing and refinement were crucial to the product's success. Small usability improvements often had outsized impacts on user satisfaction and retention.</p>
+                </div>
+                
+                <div class="next-prev-links">
+                    <a href="yale-duo-case-study.html" class="btn secondary">
+                        Next Project <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+                
+                <div class="back-to-projects">
+                    <a href="/#projects" class="btn primary">View All Projects</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mike Tullo. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/app.js"></script>
+</body>
+</html>
