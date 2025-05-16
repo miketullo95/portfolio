@@ -34,15 +34,13 @@ function setupMobileNav() {
     // Insert after header
     const header = document.querySelector('header');
     header.insertAdjacentElement('afterend', mobileNav);
-  }
 
-  const mobileNav = document.querySelector('.mobile-nav');
-  
   // Toggle mobile nav
   burger.addEventListener('click', () => {
     const isExpanded = burger.getAttribute('aria-expanded') === 'true';
     burger.setAttribute('aria-expanded', !isExpanded);
     burger.classList.toggle('active');
+    const mobileNav = document.querySelector('.mobile-nav');
     mobileNav.classList.toggle('active');
     body.classList.toggle('no-scroll');
     
@@ -76,8 +74,6 @@ function setupMobileNav() {
     }
   });
 }
-    header.insertAdjacentElement('afterend', mobileNav);
-  }
 
   const mobileNav = document.querySelector('.mobile-nav');
   

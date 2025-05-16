@@ -173,6 +173,13 @@ nav .nav-links {
     display: flex;
   }
 }
+@media (max-width: 480px) {
+  .hero-image .profile-placeholder {
+      width: 250px; /* Even smaller for very small screens */
+      height: 250px;
+      margin-top: 25px; /* A bit more spacing on very small screens */
+  }
+}
 
 nav .nav-links li a {
   font-weight: 500;
@@ -194,6 +201,51 @@ nav .nav-links li a:hover::after,
 nav .nav-links li a.active::after {
   width: 100%;
 }
+.burger {
+  cursor: pointer;
+  display: none;
+  background-color: transparent; /* Remove white background */
+  border: none;
+  padding: 8px;
+  z-index: 101;
+  position: relative;
+}
+
+/* Make the hamburger lines more visible */
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--accent); /* Change to accent color for better contrast */
+  margin: 5px;
+  transition: all 0.3s ease;
+  border-radius: 2px; /* Slightly rounded edges for a more polished look */
+}
+
+/* Style for active state (when menu is open) */
+.burger.active .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  background-color: var(--accent);
+}
+
+.burger.active .line2 {
+  opacity: 0;
+}
+
+.burger.active .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+  background-color: var(--accent);
+}
+
+/* Add a subtle hover effect */
+.burger:hover div {
+  background-color: #d4b6ff; /* Lighter version of accent color */
+}
+
+/* Add a focus outline for accessibility */
+.burger:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
 
 nav .burger {
   cursor: pointer;
@@ -204,6 +256,22 @@ nav .burger {
   nav .burger {
     display: block;
   }
+  .burger {
+    display: block;
+  }
+  .hero-image {
+    margin-top: 30px; /* Add spacing above the entire hero image container */
+}
+.hero-image .profile-placeholder {
+    width: 280px; /* Slightly smaller on mobile */
+    height: 280px;
+    margin-top: 20px; /* Additional top spacing for the profile image itself */
+}
+}
+@media (max-width: 992px) {
+  .hero-image {
+    margin-top: 30px; /* Add spacing above the entire hero image container */
+}
 }
 
 nav .burger div {
@@ -350,8 +418,25 @@ section#home {
   }
 }
 
-.hero .hero-image {
-  margin-top: var(--spacing-lg);
+.hero-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%; /* Adjust this value to move face up/down */
+}
+
+/* If you need to adjust the circle size or border */
+.hero-image .profile-placeholder {
+  width: 320px;
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
 }
 
 @media (min-width: 992px) {
