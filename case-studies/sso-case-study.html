@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yale Single Sign-On Case Study | Mike Tullo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/case-study.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
+</head>
+<body>
+    <!-- Skip to content link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="/" class="logo">Mike Tullo</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#projects">Projects</a></li>
+                <li><a href="/#resume">Resume</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <button class="burger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </button>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Case Study Header -->
+        <section class="case-study-header">
+            <div class="case-study-container">
+                <div class="case-study-banner">
+                    <img src="/img/sso-bg.jpeg" alt="Yale Single Sign-On interface screenshot showing the login screen with Yale branding" />
+                </div>
+                <h1>Yale Single Sign-On Redesign</h1>
+                <p class="subtitle">Creating a cohesive, accessible, and secure authentication experience for Yale's 35,000+ community members</p>
+                
+                <div class="case-study-meta">
+                    <div class="meta-item">
+                        <h4>Role</h4>
+                        <p>Lead UX Designer</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Tools Used</h4>
+                        <p>Figma, Jira, HTML/CSS</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Timeframe</h4>
+                        <p>3 Months</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Impact</h4>
+                        <p>100% daily use by all users</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Case Study Content -->
+        <section class="case-study-content">
+            <div class="case-study-container">
+                <div class="case-study-section">
+                    <h2>Project Overview</h2>
+                    <p>The Yale Single Sign-On (SSO) system is the primary authentication gateway for the entire Yale community, serving over 35,000 students, faculty, and staff. As the digital front door to Yale's services, it needed to reflect Yale's brand identity, provide a seamless user experience, and maintain the highest security standards.</p>
+                    
+                    <p>I was tasked with redesigning the entire authentication flow, including the login screen, password reset process, and account management interface. This project required balancing institutional requirements, security best practices, and user-centered design principles.</p>
+                    
+                    <div class="case-study-image">
+                        <img src="/img/cas-error.png" alt="Example of the old SSO login screen">
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>Problem Statement</h2>
+                    <p>The existing Yale SSO system suffered from several critical issues:</p>
+                    
+                    <ul>
+                        <li>Inconsistent branding and visual design across different authentication screens</li>
+                        <li>Poor accessibility, creating barriers for users with disabilities</li>
+                        <li>Unclear error messages and recovery paths when authentication failed</li>
+                        <li>Limited responsive design, resulting in frustrating mobile experiences</li>
+                        <li>Difficult password reset flow that led to high support ticket volumes</li>
+                    </ul>
+                    
+                    <p>These issues not only created a frustrating user experience but also compromised security by encouraging workarounds and increasing support costs through unnecessary help desk calls.</p>
+                    
+                    <div class="quote-block">
+                        <p>"The login page is the most frequently used page at Yale, yet it was failing to meet basic usability and accessibility standards."</p>
+                        <cite>- Findings from initial user research</cite>
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>User Research</h2>
+                    
+                    <h3>Research Methodology</h3>
+                    <p>To deeply understand the problems with the existing system, I conducted:</p>
+                    
+                    <ul>
+                        <li>Analysis of help desk tickets related to login issues (500+ tickets reviewed)</li>
+                        <li>Contextual interviews with 15 users across different roles (students, faculty, staff)</li>
+                        <li>Accessibility audit using WCAG 2.1 AA guidelines</li>
+                        <li>Usability testing with 8 participants, including users with disabilities</li>
+                        <li>Competitive analysis of authentication systems at peer institutions</li>
+                    </ul>
+                    
+                    <h3>Key Findings</h3>
+                    
+                    <div class="stats-block">
+                        <div class="stat-item">
+                            <div class="stat-number">42%</div>
+                            <div class="stat-label">of help desk tickets were related to password resets</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">67%</div>
+                            <div class="stat-label">of users struggled with the mobile experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">accessibility barriers identified</div>
+                        </div>
+                    </div>
+                    
+                    <p>The research revealed that users were particularly frustrated by:</p>
+                    
+                    <ul>
+                        <li>Confusing error messages that didn't clearly explain what went wrong</li>
+                        <li>Lack of guidance when password requirements weren't met</li>
+                        <li>Difficulty navigating the system on mobile devices</li>
+                        <li>Inconsistent visual cues and branding across different screens</li>
+                        <li>Poor screen reader compatibility and keyboard navigation</li>
+                    </ul>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>Design Process</h2>
+                    
+                    <div class="steps-container">
+                        <div class="step-line"></div>
+                        <div class="step-item">
+                            <h4>1. Define Requirements</h4>
+                            <p>Collaborated with IT security, identity management team, and accessibility experts to establish technical and compliance requirements.</p>
+                        </div>
+                        <div class="step-item">
+                            <h4>2. Information Architecture</h4>
+                            <p>Mapped user flows for all authentication paths, including edge cases and error states.</p>
+                        </div>
+                        <div class="step-item">
+                            <h4>3. Wireframing</h4>
+                            <p>Created low-fidelity wireframes focusing on structure, content hierarchy, and interaction patterns.</p>
+                        </div>
+                        <div class="step-item">
+                            <h4>4. Visual Design</h4>
+                            <p>Developed high-fidelity mockups aligned with Yale's brand guidelines while ensuring accessibility.</p>
+                        </div>
+                        <div class="step-item">
+                            <h4>5. Prototyping</h4>
+                            <p>Built interactive prototypes for user testing and stakeholder review.</p>
+                        </div>
+                        <div class="step-item">
+                            <h4>6. Testing & Iteration</h4>
+                            <p>Conducted multiple rounds of usability testing and made iterative improvements.</p>
+                        </div>
+                        <div class="step-item">
+                            <h4>7. Implementation</h4>
+                            <p>Worked closely with developers to ensure design fidelity and accessibility compliance.</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Design Considerations</h3>
+                    
+                    <p>Throughout the design process, I focused on several key principles:</p>
+                    
+                    <ul>
+                        <li><strong>Accessibility First:</strong> Ensuring the design met WCAG 2.1 AA standards and worked well with assistive technologies</li>
+                        <li><strong>Mobile Responsiveness:</strong> Creating a consistent experience across all device sizes</li>
+                        <li><strong>Clear Communication:</strong> Providing helpful feedback and error messages in plain language</li>
+                        <li><strong>Security vs. Usability:</strong> Balancing security requirements with user convenience</li>
+                        <li><strong>Yale Brand Identity:</strong> Maintaining consistent branding that reinforced trust</li>
+                    </ul>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>Solution</h2>
+                    
+                    <h3>Key Design Solutions</h3>
+                    
+                    <div class="case-study-image">
+                        <img src="/img/cas.png" alt="Final Yale SSO login screen design showing clean interface with Yale branding">
+                    </div>
+                    
+                    <h4>1. Redesigned Login Screen</h4>
+                    <p>The new login screen features:</p>
+                    <ul>
+                        <li>Clear Yale branding with the Yale logo and color scheme</li>
+                        <li>Simplified layout with focus on essential elements</li>
+                        <li>Prominent "Need Help?" options for password recovery</li>
+                        <li>Responsive design that adapts to all screen sizes</li>
+                        <li>High contrast elements and keyboard-navigable interface</li>
+                    </ul>
+                    
+                    <h4>2. Improved Error Handling</h4>
+                    <p>I completely redesigned the error messaging system to:</p>
+                    <ul>
+                        <li>Use plain language that explains what went wrong</li>
+                        <li>Provide clear, actionable next steps</li>
+                        <li>Display errors inline next to the relevant fields</li>
+                        <li>Use appropriate ARIA attributes for screen reader users</li>
+                        <li>Maintain security by not revealing too much information</li>
+                    </ul>
+                    
+                    <h4>3. Streamlined Password Reset</h4>
+                    <p>The new password reset flow:</p>
+                    <ul>
+                        <li>Reduced the number of steps from 7 to 4</li>
+                        <li>Added real-time password requirement validation</li>
+                        <li>Included progress indicators for multi-step processes</li>
+                        <li>Offered multiple recovery options (email, phone, security questions)</li>
+                        <li>Provided clear confirmation of successful actions</li>
+                    </ul>
+                    
+                    <h4>4. Account Management Dashboard</h4>
+                    <p>A new self-service dashboard allows users to:</p>
+                    <ul>
+                        <li>View and update their profile information</li>
+                        <li>Manage their security settings</li>
+                        <li>Set up and update recovery options</li>
+                        <li>View recent account activity for security monitoring</li>
+                        <li>Access help resources and FAQs</li>
+                    </ul>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>Testing & Validation</h2>
+                    
+                    <p>Before launch, I conducted comprehensive testing to validate the design:</p>
+                    
+                    <h3>Usability Testing</h3>
+                    <p>Conducted moderated usability tests with 12 participants representing different user groups. Key tasks included:</p>
+                    <ul>
+                        <li>Standard login process</li>
+                        <li>Recovering from various error states</li>
+                        <li>Completing the password reset flow</li>
+                        <li>Managing account security settings</li>
+                    </ul>
+                    
+                    <h3>Accessibility Testing</h3>
+                    <p>Performed thorough accessibility testing, including:</p>
+                    <ul>
+                        <li>Screen reader testing with NVDA and VoiceOver</li>
+                        <li>Keyboard navigation testing</li>
+                        <li>Color contrast analysis</li>
+                        <li>Testing with magnification tools</li>
+                        <li>Automated WCAG 2.1 AA compliance checks</li>
+                    </ul>
+                    
+                    <h3>A/B Testing</h3>
+                    <p>Conducted A/B testing with a small percentage of users to compare:</p>
+                    <ul>
+                        <li>Login completion rates</li>
+                        <li>Time to successful authentication</li>
+                        <li>Error recovery success rates</li>
+                        <li>Support ticket generation rates</li>
+                    </ul>
+                    
+                    <div class="quote-block">
+                        <p>"The new SSO design is significantly more intuitive. I can finally use the password reset function without calling the help desk."</p>
+                        <cite>- Participant in usability testing</cite>
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>Results & Impact</h2>
+                    
+                    <p>The redesigned Yale SSO system launched to the entire Yale community in phases, with full deployment completed within one month. The impact was significant and measurable:</p>
+                    
+                    <div class="stats-block">
+                        <div class="stat-item">
+                            <div class="stat-number">38%</div>
+                            <div class="stat-label">Reduction in password-related help desk tickets</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">96%</div>
+                            <div class="stat-label">Task completion rate in post-launch testing</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">99.8%</div>
+                            <div class="stat-label">WCAG 2.1 AA compliance score</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.8/5</div>
+                            <div class="stat-label">User satisfaction rating</div>
+                        </div>
+                    </div>
+                    
+                    <h3>Additional Outcomes</h3>
+                    <ul>
+                        <li>The redesigned system became a campus-wide standard for authentication interfaces</li>
+                        <li>The design system and components were adopted for other Yale web applications</li>
+                        <li>The project received recognition from Yale's Office of Digital Accessibility</li>
+                        <li>The IT support team reported significantly fewer escalations related to authentication</li>
+                    </ul>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>Lessons Learned</h2>
+                    
+                    <h3>Balancing Security and Usability</h3>
+                    <p>One of the most significant challenges was finding the right balance between stringent security requirements and user-friendly design. Through close collaboration with the security team, we found ways to maintain robust security while improving the user experience.</p>
+                    
+                    <h3>Inclusive Design Benefits Everyone</h3>
+                    <p>By prioritizing accessibility from the beginning, we created a system that was not only better for users with disabilities but also improved the experience for all users, particularly in challenging contexts like mobile usage and poor network conditions.</p>
+                    
+                    <h3>The Importance of Error States</h3>
+                    <p>The project highlighted how crucial well-designed error states are to the overall user experience. By investing time in creating clear, helpful error messages, we significantly reduced user frustration and support costs.</p>
+                    
+                    <h3>Iterative Testing Pays Off</h3>
+                    <p>Multiple rounds of testing with diverse user groups helped us catch issues early and refine the design before full implementation, ultimately saving time and resources while delivering a better final product.</p>
+                </div>
+                
+                <div class="next-prev-links">
+                    <a href="yale-duo-case-study.html" class="btn secondary">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i> Previous Project
+                    </a>
+                    <a href="/case-studies/yale-duo-case-study.html" class="btn secondary">
+                        Next Project <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+                
+                <div class="back-to-projects">
+                    <a href="/#projects" class="btn primary">View All Projects</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mike Tullo. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/app.js"></script>
+</body>
+</html>
