@@ -1,0 +1,175 @@
+/* Animated Background Pattern Styles */
+
+/* Hero section background with animated pattern */
+.hero {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(189, 147, 249, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(189, 147, 249, 0.1) 0%, transparent 50%);
+    opacity: 0.7;
+    z-index: -1;
+    animation: pulse 15s ease-in-out infinite alternate;
+  }
+  
+  /* Subtle floating elements that move slowly in the background */
+  .floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none; /* Ensures elements don't interfere with interactions */
+  }
+  
+  .floating-element {
+    position: absolute;
+    background: rgba(189, 147, 249, 0.1); /* Using accent color with low opacity */
+    border-radius: 50%;
+    filter: blur(10px);
+    mix-blend-mode: screen;
+  }
+  
+  .floating-element:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    top: 15%;
+    left: 10%;
+    animation: float1 25s ease-in-out infinite alternate;
+  }
+  
+  .floating-element:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    top: 60%;
+    left: 15%;
+    animation: float2 20s ease-in-out infinite alternate;
+  }
+  
+  .floating-element:nth-child(3) {
+    width: 180px;
+    height: 180px;
+    top: 30%;
+    right: 15%;
+    animation: float3 30s ease-in-out infinite alternate;
+  }
+  
+  .floating-element:nth-child(4) {
+    width: 120px;
+    height: 120px;
+    bottom: 20%;
+    right: 20%;
+    animation: float4 22s ease-in-out infinite alternate;
+  }
+  
+  /* Define the animation keyframes for the background and floating elements */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+  }
+  
+  @keyframes float1 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(40px, 20px); }
+  }
+  
+  @keyframes float2 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-30px, 30px); }
+  }
+  
+  @keyframes float3 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-20px, -40px); }
+  }
+  
+  @keyframes float4 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(30px, -20px); }
+  }
+  
+  /* Accessibility: Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .hero::before,
+    .floating-element {
+      animation: none !important;
+      transition: none !important;
+    }
+    
+    .hero::before {
+      opacity: 0.3;
+      background: radial-gradient(circle at 50% 50%, rgba(189, 147, 249, 0.05) 0%, transparent 70%);
+    }
+  }
+  
+  /* Subtle entrance animations for content */
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  
+  .fade-in-up-delay-1 {
+    animation: fadeInUp 0.8s ease 0.2s forwards;
+    opacity: 0;
+  }
+  
+  .fade-in-up-delay-2 {
+    animation: fadeInUp 0.8s ease 0.4s forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Subtle hover effect for buttons */
+  .btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn:hover, .btn:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(189, 147, 249, 0.3);
+  }
+  
+  /* Ensure hover effects are disabled for reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .fade-in-up,
+    .fade-in-up-delay-1,
+    .fade-in-up-delay-2 {
+      animation: none !important;
+      opacity: 1;
+      transform: none;
+    }
+    
+    .btn:hover, .btn:focus {
+      transform: none;
+      box-shadow: none;
+    }
+  }
