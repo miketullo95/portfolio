@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YaleSites Platform Case Study | Mike Tullo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/case-study.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
+</head>
+<body>
+    <!-- Skip to content link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="/" class="logo">Mike Tullo</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#projects">Projects</a></li>
+                <li><a href="/#resume">Resume</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <button class="burger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </button>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Case Study Header -->
+        <section class="case-study-header">
+            <div class="case-study-container">
+                <div class="case-study-banner">
+                    <img src="/img/Yalesites-banner.png" alt="YaleSites Platform interface showing the component builder and website design system" />
+                </div>
+                <h1>YaleSites Platform: Redesigning Yale's Web Experience</h1>
+                <p class="subtitle">Transforming how Yale's 1,500+ websites are built and maintained through a component-based design system and collaborative development model</p>
+                
+                <div class="case-study-meta">
+                    <div class="meta-item">
+                        <h4>Role</h4>
+                        <p>Product Manager, Lead UX Designer</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Tools Used</h4>
+                        <p>Figma, Jira, Drupal, Storybook</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Timeframe</h4>
+                        <p>Multi-year project</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Impact</h4>
+                        <p>1,500+ Yale websites</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Case Study Content -->
+        <section class="case-study-content">
+            <div class="case-study-container">
+                <div class="case-study-section">
+                    <h2>Project Overview</h2>
+                    <p>The YaleSites platform is a multi-year redesign project that empowers the Yale community to better communicate with their audiences through a secure, cost-effective, usable, accessible, and sustainable web platform. As Product Manager, I led the transition from an outdated Drupal 7 environment to a modern Drupal 10 platform with a component-based design system, transforming how Yale departments create and maintain their web presence.</p>
+                    
+                    <div class="case-study-image">
+                        <img src="/api/placeholder/1200/600" alt="Side-by-side comparison of old Drupal 7 interface vs. new YaleSites component builder">
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>Problem Statement</h2>
+                    <p>Yale's previous web platform presented numerous challenges that hindered effective digital communication across the university's 1,500+ websites:</p>
+                    
+                    <ul>
+                        <li><strong>Poor User Experience:</strong> The Drupal 7 administration interface was difficult to navigate with a steep learning curve for content editors</li>
+                        <li><strong>Technical Barriers:</strong> Required HTML/CSS/JavaScript knowledge for even basic customization</li>
+                        <li><strong>Siloed Development:</strong> Features and functionality trapped within individual sites with no mechanism for sharing innovations</li>
+                        <li><strong>Branding Inconsistencies:</strong> Difficult for users to maintain Yale branding through CSS, leading to visual inconsistency</li>
+                        <li><strong>Accessibility Concerns:</strong> Manual implementation of accessibility features created inconsistent experiences</li>
+                    </ul>
+                    
+                    <div class="quote-block">
+                        <p>"I feel like I need a computer science degree just to update my department's website. It shouldn't be this hard to add a new faculty member or post an event."</p>
+                        <cite>- Department Administrator during user research interview</cite>
+                    </div>
+                    
+                    <p>Research revealed that users fell into distinct archetypes based on knowledge level (Uninformed, Intermediate, Expert), role (Team Player, Owner, Dabbler), and approach (Easy Going, Inspired, Mechanic). Most users experienced significant pain points around content management, design limitations, and technical requirements.</p>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>User Research</h2>
+                    
+                    <h3>Research Methodology</h3>
+                    <p>To deeply understand the needs of the Yale web community, I conducted comprehensive user research:</p>
+                    
+                    <ul>
+                        <li>Conducted 18 in-depth user interviews with administrators, content editors, and developers</li>
+                        <li>Analyzed 159 survey responses from across Yale departments</li>
+                        <li>Facilitated user shadowing sessions to observe website maintenance workflows</li>
+                        <li>Examined support tickets to identify common issues and pain points</li>
+                        <li>Created detailed user archetypes and personas to guide design decisions</li>
+                    </ul>
+                    
+                    <h3>Key Findings</h3>
+                    
+                    <div class="stats-block">
+                        <div class="stat-item">
+                            <div class="stat-number">73%</div>
+                            <div class="stat-label">of users struggled with basic content updates</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">68%</div>
+                            <div class="stat-label">wanted better design without coding</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">85%</div>
+                            <div class="stat-label">needed better accessibility tools</div>
+                        </div>
+                    </div>
+                    
+                    <p>This research revealed the top 5 user needs:</p>
+                    
+                    <ul>
+                        <li>Integrated accessibility audit tools</li>
+                        <li>Updated look and feel</li>
+                        <li>Improved user permissions/access</li>
+                        <li>Better support resources</li>
+                        <li>Simplified content management</li>
+                    </ul>
+                    
+                    <div class="case-study-image">
+                        <img src="/img/archetype-breakdown.png" alt="User persona diagram showing different Yale website administrator archetypes">
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>Design Process</h2>
+                    
+                    <div class="steps-container">
+                        <div class="step-line"></div>
+                        <div class="step-item">
+                            <h4>1. Discovery & User Research</h4>
+                            <p>Conducted comprehensive research to understand user needs and pain points.</p>
+                        </div>
+                        <div class="step-item">
+                            <h4>2. Design System Development</h4>
+                            <p>Created a component-based design system that enforced Yale branding while enabling flexibility.</p>
+                        </div>
+                        <div class="step-item">
+                            <h4>3. Platform Architecture</h4>
+                            <p>Designed a new platform structure with centralized components and flexible permissions.</p>
+                        </div>
+                        <div class="step-item">
+                            <h4>4. Implementation & Rollout</h4>
+                            <p>Shifted to a collaborative development model that enabled shared innovation.</p>
+                        </div>
+                        <div class="step-item">
+                            <h4>5. Feedback & Iteration</h4>
+                            <p>Established continuous feedback loops to refine and enhance the platform.</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Design System Development</h3>
+                    <p>Working with designers and developers, we established a component-based approach using:</p>
+                    
+                    <ul>
+                        <li><strong>Storybook component library</strong> for consistent UI elements</li>
+                        <li><strong>Emulsify</strong>, an open-source design system that integrates with Drupal</li>
+                        <li><strong>Block-based content architecture</strong> for intuitive content creation</li>
+                        <li><strong>Yale's visual identity guidelines</strong> baked into components</li>
+                    </ul>
+                    
+                    <p>The design system addressed the pain points identified in research by creating reusable components that required no coding knowledge while maintaining brand consistency.</p>
+                    
+                    <div class="case-study-image">
+                        <img src="/api/placeholder/1200/600" alt="YaleSites component library showing various UI blocks and components">
+                    </div>
+                    
+                    <h3>Platform Architecture</h3>
+                    <p>I guided the development of a new platform structure:</p>
+                    
+                    <ul>
+                        <li>Centralized design system independent from the CMS</li>
+                        <li>Drupal 10 environment with Layout Builder integration</li>
+                        <li>Component-based "blocks" for easy content creation</li>
+                        <li>Standardized single codebase for security and maintenance</li>
+                        <li>Flexible permission system based on user roles</li>
+                    </ul>
+                    
+                    <h3>Collaborative Development Model</h3>
+                    <p>One of the most innovative aspects of the new platform was shifting to a collaborative development model where:</p>
+                    
+                    <ul>
+                        <li>Core platform is maintained by Yale ITS</li>
+                        <li>Departments can enhance the platform through vendor collaborations</li>
+                        <li>New features benefit the entire community</li>
+                        <li>Features are built based on shared user needs</li>
+                    </ul>
+                    
+                    <p><a href="https://westcampus.yale.edu" class="accent-link" target="new" rel="noopener noreferrer">Yale West Campus</a> served as our first major case study, transforming their site using our new platform architecture and setting the standard for future implementations.</p>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>Solution</h2>
+                    
+                    <h3>Intuitive Block System</h3>
+                    <p>The new YaleSites platform offers 25+ purpose-built content blocks designed for non-technical users, including:</p>
+                    
+                    <ul>
+                        <li>Accordions for expandable content</li>
+                        <li>Button blocks with proper styling and accessibility</li>
+                        <li>Spotlight sections for featuring content</li>
+                        <li>Media grids for image galleries</li>
+                        <li>Quote blocks for testimonials</li>
+                        <li>Event listings with automatic formatting</li>
+                        <li>People directories with consistent styling</li>
+                    </ul>
+                    
+                    <div class="case-study-image">
+                        <img src="/api/placeholder/1200/600" alt="YaleSites Layout Builder interface showing drag-and-drop functionality">
+                    </div>
+                    
+                    <h3>Visual Layout Builder</h3>
+                    <p>The platform features a drag-and-drop interface requiring no coding knowledge, allowing users to:</p>
+                    
+                    <ul>
+                        <li>Visually arrange content blocks</li>
+                        <li>Preview changes in real-time</li>
+                        <li>Adjust layouts for different device sizes</li>
+                        <li>Save templates for future reuse</li>
+                    </ul>
+                    
+                    <h3>Integrated Accessibility</h3>
+                    <p>Accessibility is baked into the platform rather than being an afterthought:</p>
+                    
+                    <ul>
+                        <li>Built-in tools ensure sites meet WCAG 2.1 AA standards</li>
+                        <li>Automated accessibility checking during content creation</li>
+                        <li>Proper heading structure enforced by the system</li>
+                        <li>Alt text requirements for images</li>
+                        <li>Keyboard navigation thoroughly tested</li>
+                    </ul>
+                    
+                    <h3>Consistent Branding</h3>
+                    <p>The platform ensures Yale's brand standards are maintained while allowing customization:</p>
+                    
+                    <ul>
+                        <li>Yale typography automatically applied</li>
+                        <li>Color palettes pre-configured to meet brand guidelines</li>
+                        <li>Standardized spacing and layout principles</li>
+                        <li>Department-specific theming options within guidelines</li>
+                    </ul>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>Results & Impact</h2>
+                    
+                    <p>The platform transformation delivered significant results across the Yale community:</p>
+                    
+                    <div class="stats-block">
+                        <div class="stat-item">
+                            <div class="stat-number">85%</div>
+                            <div class="stat-label">Reduction in technical support tickets</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">70%</div>
+                            <div class="stat-label">Faster content updates</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">WCAG 2.1 AA compliance</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">40%</div>
+                            <div class="stat-label">Cost reduction in site development</div>
+                        </div>
+                    </div>
+                    
+                    <h3>Overall Platform Success</h3>
+                    <p>Beyond the technical achievements, the new platform delivered these broader benefits:</p>
+                    
+                    <ul>
+                        <li><strong>Improved User Satisfaction:</strong> Content editors now complete tasks without developer assistance</li>
+                        <li><strong>Reduced Development Costs:</strong> Features developed once benefit the entire community</li>
+                        <li><strong>Consistent Brand Experience:</strong> Standardized look and feel across Yale websites</li>
+                        <li><strong>Enhanced Accessibility:</strong> Integrated tools ensure accessible content creation</li>
+                        <li><strong>Streamlined Support:</strong> Centralized training and documentation resources</li>
+                        <li><strong>Sustainable Platform:</strong> Future-proof architecture ready for ongoing enhancement</li>
+                    </ul>
+                </div>
+                
+                <div class="case-study-section">
+                    <h2>Lessons Learned</h2>
+                    
+                    <h3>User-Centered Development</h3>
+                    <p>Leading this transformation reinforced the importance of basing decisions on user research rather than assumptions. By deeply understanding our diverse user base, we created a platform that genuinely addressed their needs rather than forcing them to adapt to technology.</p>
+                    
+                    <h3>Component Thinking</h3>
+                    <p>Breaking complex systems into reusable, manageable pieces proved essential for both technical sustainability and user adoption. The component-based approach allowed us to maintain consistency while enabling flexibility and continuous improvement.</p>
+                    
+                    <h3>Community Ownership</h3>
+                    <p>Fostering collaboration across organizational boundaries was key to the platform's success. By creating a model where departments could contribute to the platform's growth, we built a sense of ownership that traditional IT projects often lack.</p>
+                    
+                    <h3>Continuous Feedback</h3>
+                    <p>Maintaining open channels with users throughout development helped us catch issues early and ensured the platform evolved in the right direction. Regular user testing and feedback sessions were invaluable for refining the user experience.</p>
+                    
+                    <h3>Sustainable Growth</h3>
+                    <p>Building for long-term platform health rather than short-term gains required difficult tradeoffs but ultimately created a more valuable solution. The platform continues to evolve through our collaborative model, with ongoing feature development driven by user needs and organizational requirements.</p>
+                
+                </div>
+                
+                <div class="next-prev-links">
+                    <a href="sso-case-study.html" class="btn secondary">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i> Previous Project
+                    </a>
+                    <a href="/case-studies/yale-duo-case-study.html" class="btn secondary">
+                        Next Project <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+                
+                <div class="back-to-projects">
+                    <a href="/#projects" class="btn primary">View All Projects</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mike Tullo. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/app.js"></script>
+</body>
+</html>
