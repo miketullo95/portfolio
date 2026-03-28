@@ -34,10 +34,19 @@ export default function RootLayout({
       className={`${plusJakartaSans.variable} ${lora.variable}`}
       suppressHydrationWarning
     >
-      <body className="font-sans antialiased bg-white dark:bg-neutral-950 text-neutral-950 dark:text-white">
+      <body className="font-sans antialiased bg-white dark:bg-neutral-900 text-neutral-950 dark:text-white">
         <ThemeProvider>
+          {/* Skip link — allows keyboard users to bypass repeated nav
+              and jump directly to page content — WCAG 2.4.1 */}
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white dark:focus:bg-neutral-900 focus:text-blue-600 focus:border focus:border-blue-600 focus:rounded-lg focus:text-sm focus:font-medium focus:shadow-lg"
+          >
+            Skip to main content
+          </a>
           <Nav />
-          <main>{children}</main>
+          {/* id="main-content" is the skip link target — WCAG 2.4.1 */}
+          <main id="main-content">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

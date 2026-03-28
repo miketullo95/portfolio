@@ -23,8 +23,41 @@ export function getCaseStudyBySlug(slug: string): { meta: CaseStudyMeta; content
   }
 }
 
+export type Heading = { id: string; text: string }
+
+/**
+ * Convert a heading string to a URL-safe id.
+ * Must stay in sync with the same function in the custom H2 MDX component
+ * so that TOC anchor hrefs resolve to the correct element ids.
+ */
+export function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .trim()
+}
+
+/**
+ * Parse H2 headings from raw MDX source to build the table of contents.
+ * Only H2s (##) are included — H3s are sub-points, not top-level nav.
+ */
+export function getHeadings(source: string): Heading[] {
+  const headingRegex = /^## (.+)$/gm
+  const headings: Heading[] = []
+  let match
+  while ((match = headingRegex.exec(source)) !== null) {
+    const text = match[1].trim()
+    headings.push({ id: slugify(text), text })
+  }
+  return headings
+}
+
 export function getAllCaseStudies(): CaseStudyMeta[] {
   return getCaseStudySlugs()
-    .map((slug) => getCaseStudyBySlug(slug).meta)
+    .map((slug) => getCaseStudyBySlug(slug))
+    .filter((result): result is NonNullable<typeof result> => result !== null)
+    .map((result) => result.meta)
     .sort((a, b) => a.order - b.order)
 }

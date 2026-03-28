@@ -62,12 +62,17 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <div className="w-full h-full rounded-2xl bg-neutral-100 dark:bg-neutral-800 overflow-hidden flex items-center justify-center text-neutral-400 text-sm">
-            {/* TODO: Replace with actual photo once available */}
-            Photo coming soon
+          <div className="w-full h-full rounded-2xl bg-neutral-100 dark:bg-neutral-800 overflow-hidden">
+            <Image
+              src="/images/me.jpg"
+              alt="Mike Tullo, Product Manager and UX Designer"
+              fill
+              className="object-cover object-top"
+              priority
+            />
           </div>
-          {/* Decorative blue accent border offset behind image */}
-          <div className="absolute -bottom-3 -right-3 w-full h-full rounded-2xl border-2 border-blue-500/25 -z-10" />
+          {/* Purely decorative — hidden from assistive technology — WCAG 1.1.1 */}
+          <div aria-hidden="true" className="absolute -bottom-3 -right-3 w-full h-full rounded-2xl border-2 border-blue-500/25 -z-10" />
         </motion.div>
       </div>
     </section>

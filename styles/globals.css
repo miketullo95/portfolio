@@ -32,11 +32,11 @@
   }
 
   .dark {
-    --background: 0 0% 3.9%;
+    --background: 0 0% 9%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
+    --card: 0 0% 11%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
+    --popover: 0 0% 9%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
     --primary-foreground: 0 0% 9%;
@@ -65,5 +65,75 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Scroll padding accounts for sticky nav height (64px) so focused
+     elements are never hidden behind it — WCAG 2.4.11 */
+  html {
+    scroll-padding-top: 5rem;
+  }
+
+  /* Consistent, visible focus indicator — WCAG 2.4.7.
+     Uses :focus-visible so mouse users are unaffected. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-blue-600 ring-offset-2 ring-offset-white rounded-sm;
+  }
+
+  .dark :focus-visible {
+    @apply ring-blue-400 ring-offset-neutral-900;
+  }
+}
+
+/* ─── MDX Prose styles ──────────────────────────────────────────────────────
+   Applied to the wrapper div around MDXRemote content. Scoped so they don't
+   bleed into custom components (StatBlock, Quote) that opt out with their
+   own Tailwind classes. */
+@layer components {
+  .prose {
+    & h2 {
+      @apply font-display text-2xl text-neutral-950 dark:text-white mt-14 mb-4 leading-snug;
+    }
+    & h3 {
+      @apply font-sans text-lg font-semibold text-neutral-950 dark:text-white mt-10 mb-3;
+    }
+    & p {
+      @apply text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6 text-base;
+    }
+    & ul {
+      @apply list-disc list-outside ml-6 mb-6 space-y-2;
+    }
+    & ol {
+      @apply list-decimal list-outside ml-6 mb-6 space-y-2;
+    }
+    & li {
+      @apply text-neutral-700 dark:text-neutral-300 leading-relaxed;
+    }
+    & strong {
+      @apply font-semibold text-neutral-950 dark:text-white;
+    }
+    & a {
+      /* blue-600 on white = 5.1:1; blue-400 on neutral-900 = 7.4:1 — WCAG 1.4.3 AA */
+      @apply text-blue-600 dark:text-blue-400 underline underline-offset-2 hover:no-underline;
+    }
+    & blockquote {
+      @apply border-l-4 border-blue-600 pl-6 my-10 not-italic;
+    }
+    & blockquote p {
+      @apply text-xl font-display italic text-neutral-700 dark:text-neutral-300 mb-0;
+    }
+    & hr {
+      @apply border-neutral-200 dark:border-neutral-800 my-12;
+    }
+  }
+}
+
+/* Respect prefers-reduced-motion for any CSS transitions/animations
+   that fall outside Framer Motion — WCAG 2.3.3 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

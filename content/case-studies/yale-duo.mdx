@@ -1,12 +1,114 @@
 ---
-title: "Yale Duo MFA"
-subtitle: "Streamlining multi-factor authentication rollout for 30,000+ Yale community members."
+title: "Yale DUO Opt-In"
+subtitle: "Designing a user-centered approach to two-factor authentication for Yale's 20,000+ community members — turning a mandatory security rollout into an empowering opt-in experience."
 company: "Yale University"
-role: "UX Designer, Product Manager"
-timeline: "TODO"
-tags: ["UX Design", "Security", "Product Management"]
+role: "User Experience Designer"
+timeline: "2 Weeks"
+tags: ["UX Design", "Security", "Usability Research"]
 coverImage: "/images/case-studies/yale-duo-cover.jpg"
 order: 2
 ---
 
-{/* TODO: Add case study content */}
+export const outcomeStats = [
+  { value: "16,000+", label: "User responses collected in the feedback survey" },
+  { value: "4.6 / 5", label: "Average satisfaction rating from the community" },
+  { value: "0", label: "Compromised NetID accounts since launch" },
+]
+
+## Overview
+
+To improve online security at Yale, the IT team planned to launch a two-factor authentication requirement for all 20,000+ community members. The UX team was responsible for consulting on the rollout and designing, testing, and iterating on any front-facing solution for the deployment of this service.
+
+The original plan would require users to adapt to the new experience with minimal support — a single warning email and nothing more. Our team recognized that approach would lead to confusion, resistance, and increased security risk.
+
+## Problem Statement
+
+As members of the Yale community, our interactions with Yale's online services were about to become more cumbersome due to two-factor authentication. Without clear guidance or user preparation, a forced rollout would undermine the very security outcomes it was meant to achieve.
+
+The core tension: **security teams needed full adoption; users needed to feel in control.**
+
+## Process
+
+### Original Plan
+
+The initial proposal divided the Yale community into groups and gradually added each group to the new security plan, with a single email as the only communication. Users would be expected to adapt on their own — no preparation, no context, no choice.
+
+### Competitive Analysis
+
+The UX team conducted a competitive analysis of other universities that had implemented two-factor authentication. A clear pattern emerged: the most successful rollouts embedded DUO authentication inside a university-branded webpage. This reinforced user confidence that the service was officially approved — encouraging opt-in rather than triggering resistance.
+
+### Solution Strategy: The Illusion of Choice
+
+Our recommendation was an **opt-in system** where users are flagged for eligibility, then invited to visit a webpage to learn about two-factor authentication and enroll at their own pace. Rather than being forced into a new system, users could feel empowered to opt in themselves.
+
+The process followed five phases:
+
+1. **Research & Analysis** — Studied peer institutions' implementations and conducted user interviews to understand concerns and challenges
+2. **Strategy Development** — Created the opt-in approach to give users more control and transparency
+3. **Design & Prototyping** — Developed wireframes and prototypes of the opt-in flow with clear system status indicators
+4. **User Testing** — Conducted testing to identify edge cases and improve the user flow
+5. **Implementation & Feedback** — Launched with built-in feedback mechanisms for continuous improvement
+
+<CaseStudyImage
+  src="/images/case-studies/yale-duo-flow.png"
+  alt="User flow diagram for the Yale DUO opt-in process showing all paths and edge cases"
+  caption="Comprehensive user flow covering all opt-in paths, device types, and edge cases"
+/>
+
+## Design Considerations
+
+### System Status Visibility
+
+The opt-in process had different outcomes depending on each user's account state — determined by back-end systems. To keep users informed, we designed a **three-step progress meter** at the top of every screen, making it clear where users were in the process and what came next.
+
+This directly applies Nielsen Norman Group's first usability heuristic: *visibility of system status*. Users should always know what is happening and what their next step is.
+
+### User Preparation
+
+Two-factor authentication is not a light topic. We built the experience around the **5 W's framework** to guide users through what to expect:
+
+- **What** is two-factor authentication?
+- **When** will I be prompted?
+- **Why** does this need to happen?
+- **Who** do I contact if I need help?
+- **What** happens if something goes wrong?
+
+### Edge Cases Through User Testing
+
+User testing revealed that users could take meaningfully different paths based on their devices, experience level, and eligibility status. We created a comprehensive user flow to cover all scenarios.
+
+One critical edge case: users whose only registered DUO device was an **office landline**. While technically compliant, a single office landline as an authentication method — especially during the remote-work era — was a significant security gap. We recommended a back-end check that flags this scenario and prompts users to register an additional device before completing opt-in.
+
+<CaseStudyImage
+  src="/images/case-studies/yale-duo-enrollment.png"
+  alt="Screenshot of the Yale DUO self-enrollment interface showing the step-by-step opt-in flow"
+  caption="The DUO self-enrollment interface — step-by-step progress with clear system status at every stage"
+/>
+
+## Solution
+
+The final solution was a self-service opt-in webpage where users could learn what two-factor authentication is and why it matters, choose when to begin enrollment, manage their registered devices during the opt-in flow, and receive clear confirmation of every step and its outcome.
+
+<Quote cite="Jeremy Rosenberg, Interim Chief Information Security Officer, Yale ITS">
+  Since the launch of DUO Opt-In in 2020, instances of people using compromised NetIDs have dropped to zero.
+</Quote>
+
+## Results
+
+<StatBlock stats={outcomeStats} />
+
+User feedback collected at the end of the opt-in flow consistently highlighted words like **easy**, **simple**, **intuitive**, **clear**, and **straightforward** — a strong signal that a security-heavy process had been successfully made approachable.
+
+## Lessons Learned
+
+### Empowerment Through Choice
+
+The biggest takeaway was how much user behavior changes when people feel in control. By framing enrollment as a choice rather than a mandate — even when full adoption was ultimately required — the UX team dramatically reduced resistance and confusion.
+
+### Edge Case Consideration
+
+The landline scenario showed how real-world user contexts can expose gaps that seem minor in design reviews but become critical in production. Building edge-case discovery into the testing process early is not optional — it is essential.
+
+### User-Centered Design in Complex Technical Projects
+
+The Yale DUO Opt-In project demonstrated that user-centered design principles apply equally to technical and security-driven work. Empathy, preparation, and transparency are not luxuries — they are what makes adoption actually work.
