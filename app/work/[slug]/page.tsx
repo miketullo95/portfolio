@@ -10,11 +10,15 @@ import MdxH2 from '@/components/case-study/mdx-heading'
 import CaseStudyImage from '@/components/case-study/mdx-image'
 import TableOfContents from '@/components/case-study/table-of-contents'
 import RelatedStudies from '@/components/case-study/related-studies'
+import ProcessSteps from '@/components/case-study/process-steps'
+import YouTubeEmbed from '@/components/case-study/youtube-embed'
 
 const mdxComponents = {
   StatBlock,
   Quote,
   CaseStudyImage,
+  ProcessSteps,
+  YouTubeEmbed,
   // Override the default h2 renderer so every heading gets an id + anchor
   h2: MdxH2,
 }

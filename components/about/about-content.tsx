@@ -78,11 +78,15 @@ export default function AboutContent() {
           </div>
 
           <motion.div
-            className="relative shrink-0 w-64 h-64 md:w-72 md:h-72"
+            className="relative shrink-0 w-64 h-64 md:w-72 md:h-72 cursor-pointer"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
+            whileHover={{ scale: 1.04 }}
+            transition={{
+              opacity: { duration: 0.6, ease: 'easeOut' },
+              scale: { type: 'spring', stiffness: 300, damping: 22 },
+            }}
           >
             <div className="w-full h-full rounded-2xl overflow-hidden bg-neutral-100 dark:bg-neutral-800">
               {/* TODO: Replace with updated photo when available */}
@@ -252,18 +256,30 @@ export default function AboutContent() {
             Browse case studies from Yale and Timex, or get in touch if you want to talk shop.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href="/work"
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors"
+            <motion.div
+              whileHover={{ y: -3 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ duration: 0.15, ease: 'easeOut' }}
             >
-              View My Work
-            </Link>
-            <Link
-              href="/contact"
-              className="px-6 py-3 border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:border-neutral-500 dark:hover:border-neutral-500 text-sm font-medium rounded-lg transition-colors"
+              <Link
+                href="/work"
+                className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm hover:shadow-md"
+              >
+                View My Work
+              </Link>
+            </motion.div>
+            <motion.div
+              whileHover={{ y: -3 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ duration: 0.15, ease: 'easeOut' }}
             >
-              Get in Touch
-            </Link>
+              <Link
+                href="/contact"
+                className="inline-block px-6 py-3 border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:border-neutral-500 dark:hover:border-neutral-500 text-sm font-medium rounded-lg transition-colors"
+              >
+                Get in Touch
+              </Link>
+            </motion.div>
           </div>
         </motion.div>
       </section>

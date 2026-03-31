@@ -5,6 +5,14 @@ import { usePathname } from 'next/navigation'
 import { useTheme } from 'next-themes'
 import { Sun, Moon, Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+
+const MotionLink = motion(Link)
+
+const navLinkVariants = {
+  rest: { scaleX: 0 },
+  hover: { scaleX: 1, transition: { duration: 0.2, ease: 'easeOut' } },
+}
 
 const links = [
   { href: '/work', label: 'Work' },
@@ -55,20 +63,31 @@ export default function Nav() {
             {links.map(({ href, label }) => {
               const isCurrent = pathname === href || pathname.startsWith(href + '/')
               return (
-                <Link
+                <MotionLink
                   key={href}
                   href={href}
                   aria-current={isCurrent ? 'page' : undefined}
+                  initial="rest"
+                  whileHover="hover"
+                  animate="rest"
                   className={[
                     // Minimum 44px touch target height via py-2.5 — WCAG 2.5.8
-                    'text-sm px-3 py-2.5 rounded-md transition-colors',
+                    'relative text-sm px-3 py-2.5 rounded-md transition-colors',
                     isCurrent
                       ? 'text-neutral-950 dark:text-white font-medium'
                       : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-950 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800',
                   ].join(' ')}
                 >
                   {label}
-                </Link>
+                  {/* Animated underline — expands from center on hover */}
+                  {!isCurrent && (
+                    <motion.span
+                      aria-hidden="true"
+                      className="absolute bottom-1.5 left-3 right-3 h-px bg-current opacity-40 origin-center"
+                      variants={navLinkVariants}
+                    />
+                  )}
+                </MotionLink>
               )
             })}
 

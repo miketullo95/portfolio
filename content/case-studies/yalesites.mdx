@@ -9,18 +9,6 @@ coverImage: "/images/case-studies/yalesites-cover.png"
 order: 1
 ---
 
-export const researchStats = [
-  { value: "73%", label: "of users struggled with basic content updates" },
-  { value: "68%", label: "wanted better design without coding" },
-  { value: "85%", label: "needed better accessibility tools" },
-]
-
-export const outcomeStats = [
-  { value: "85%", label: "Reduction in technical support tickets" },
-  { value: "100%", label: "WCAG 2.1 AA compliance across all components" },
-  { value: "40%", label: "Cost reduction in site development" },
-]
-
 ## Overview
 
 The YaleSites platform is a multi-year redesign project that empowers the Yale community to better communicate with their audiences through a secure, cost-effective, usable, accessible, and sustainable web platform. As Product Manager, I led the transition from an outdated Drupal 7 environment to a modern Drupal 10 platform with a component-based design system — transforming how Yale departments create and maintain their web presence.
@@ -55,7 +43,11 @@ To deeply understand the needs of the Yale web community, I conducted comprehens
 
 ### Key Findings
 
-<StatBlock stats={researchStats} />
+<StatBlock stats={[
+  { value: "73%", label: "of users struggled with basic content updates" },
+  { value: "68%", label: "wanted better design without coding" },
+  { value: "85%", label: "needed better accessibility tools" },
+]} />
 
 Research surfaced the top five user needs in priority order:
 
@@ -65,15 +57,38 @@ Research surfaced the top five user needs in priority order:
 4. Better support resources
 5. Simplified content management
 
+<CaseStudyImage
+  src="/images/case-studies/yalesites-archetypes.png"
+  alt="Diagram showing Yale user archetypes broken down by knowledge level, role, and approach"
+  caption="User archetype breakdown from research — segmented by knowledge level, role, and working style"
+/>
+
 ## Design Process
 
 The project followed five phases, each building on the insights from the last:
 
-1. **Discovery & User Research** — Comprehensive research to understand user needs and pain points across the Yale community
-2. **Design System Development** — A component-based system that enforced Yale branding while enabling flexibility
-3. **Platform Architecture** — New platform structure with centralized components and flexible permissions
-4. **Implementation & Rollout** — Shifted to a collaborative development model enabling shared innovation across departments
-5. **Feedback & Iteration** — Continuous feedback loops to refine and enhance the platform over time
+<ProcessSteps steps={[
+  {
+    title: "Discovery & Research",
+    description: "Comprehensive interviews, surveys, and shadowing sessions to surface real user pain points across Yale departments."
+  },
+  {
+    title: "Design System",
+    description: "Built a component library in Storybook using Emulsify — Yale branding baked in, no coding required."
+  },
+  {
+    title: "Platform Architecture",
+    description: "Redesigned the platform structure with a centralized core and flexible department-level customization."
+  },
+  {
+    title: "Implementation & Rollout",
+    description: "Shifted to a collaborative development model so any department's improvements benefit the whole community."
+  },
+  {
+    title: "Feedback & Iteration",
+    description: "Established continuous feedback loops with content editors and developers to refine the platform over time."
+  }
+]} />
 
 ### Design System Development
 
@@ -86,16 +101,10 @@ Working with designers and developers, we established a component-based approach
 
 The design system addressed pain points from research by creating reusable components that required no coding knowledge while maintaining brand consistency across all 1,500+ Yale websites.
 
-<CaseStudyImage
-  src="/images/case-studies/yalesites-archetypes.png"
-  alt="Diagram showing Yale user archetypes broken down by knowledge level, role, and approach"
-  caption="User archetype breakdown from research — segmented by knowledge level, role, and working style"
-/>
-
-<CaseStudyImage
-  src="/images/case-studies/yalesites-platform.png"
-  alt="Diagram of the YaleSites platform structure showing centralized core and department-level customization"
-  caption="YaleSites platform architecture — centralized core maintained by Yale ITS with department-level flexibility"
+<YouTubeEmbed
+  id="2B1H0-amrIM"
+  title="YaleSites Storybook Demo"
+  caption="A demonstration of the YaleSites Storybook component library, showcasing reusable UI elements for consistent and accessible design."
 />
 
 ### Collaborative Development Model
@@ -108,6 +117,12 @@ One of the most innovative aspects of the new platform was shifting to a collabo
 - Feature prioritization driven by shared user needs
 
 Yale West Campus served as our first major case study, transforming their site using the new platform architecture and setting the standard for future implementations.
+
+<CaseStudyImage
+  src="/images/case-studies/yalesites-platform.png"
+  alt="Diagram of the YaleSites platform structure showing centralized core and department-level customization"
+  caption="YaleSites platform architecture — centralized core maintained by Yale ITS with department-level flexibility"
+/>
 
 ## Solution
 
@@ -127,6 +142,12 @@ The new YaleSites platform offers 25+ purpose-built content blocks designed for 
 
 The platform features a drag-and-drop interface requiring no coding knowledge, allowing users to visually arrange content blocks, preview changes in real-time, adjust layouts for different device sizes, and save templates for future reuse.
 
+<YouTubeEmbed
+  id="BXGYGVHgCe8"
+  title="YaleSites Authoring Experience Demo"
+  caption="A demonstration of the YaleSites authoring experience, showcasing drag-and-drop content creation and theme selection."
+/>
+
 ### Integrated Accessibility
 
 Accessibility is baked into the platform rather than treated as an afterthought:
@@ -143,7 +164,11 @@ The platform ensures Yale's brand standards are maintained while allowing approp
 
 ## Results
 
-<StatBlock stats={outcomeStats} />
+<StatBlock stats={[
+  { value: "85%", label: "Reduction in technical support tickets" },
+  { value: "100%", label: "WCAG 2.1 AA compliance across all components" },
+  { value: "40%", label: "Cost reduction in site development" },
+]} />
 
 Beyond the metrics, the platform delivered broader organizational benefits:
 

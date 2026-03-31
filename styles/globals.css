@@ -127,6 +127,19 @@
   }
 }
 
+/* ─── Global link transitions ───────────────────────────────────────────────
+   Smooth underline-offset animation for text anchor tags (not buttons).
+   The offset shifts 2px → 4px on hover for a subtle floating effect. */
+@layer utilities {
+  a:not([class*="px-"]):not([class*="rounded"]) {
+    transition: color 0.2s ease, text-underline-offset 0.2s ease;
+    text-underline-offset: 2px;
+  }
+  a:not([class*="px-"]):not([class*="rounded"]):hover {
+    text-underline-offset: 4px;
+  }
+}
+
 /* Respect prefers-reduced-motion for any CSS transitions/animations
    that fall outside Framer Motion — WCAG 2.3.3 */
 @media (prefers-reduced-motion: reduce) {
