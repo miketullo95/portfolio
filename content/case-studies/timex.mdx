@@ -9,17 +9,6 @@ coverImage: "/images/case-studies/timex-cover.jpg"
 order: 4
 ---
 
-export const researchStats = [
-  { value: "24", label: "Parent interviews conducted" },
-  { value: "18", label: "Children participated in usability sessions" },
-  { value: "3", label: "Competitor products analyzed in depth" },
-]
-
-export const outcomeStats = [
-  { value: "100k+", label: "App downloads at launch" },
-  { value: "4.1 / 5", label: "App Store rating across 1,500+ reviews" },
-  { value: "1,500+", label: "User reviews submitted" },
-]
 
 ## Overview
 
@@ -45,7 +34,11 @@ The challenge was to design a wearable device and mobile application that would:
 
 Designing for two distinct user groups required separate and equally rigorous research tracks.
 
-<StatBlock stats={researchStats} />
+<StatBlock stats={[
+  { value: "24", label: "Parent interviews conducted" },
+  { value: "18", label: "Children participated in usability sessions" },
+  { value: "3", label: "Competitor products analyzed in depth" },
+]} />
 
 ### Key Research Findings
 
@@ -133,7 +126,11 @@ Based on testing feedback, we made several key changes:
 
 ## Results
 
-<StatBlock stats={outcomeStats} />
+<StatBlock stats={[
+  { value: "100k+", label: "App downloads at launch" },
+  { value: "4.1 / 5", label: "App Store rating across 1,500+ reviews" },
+  { value: "1,500+", label: "User reviews submitted" },
+]} />
 
 User reviews consistently highlighted the themes the design was built around: **easy to use**, **peace of mind**, **great for kids**, **reliable**, and **simple setup**.
 
