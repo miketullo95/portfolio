@@ -1,0 +1,147 @@
+---
+title: "YaleSites — Operating a Platform at Scale"
+subtitle: "Transitioning from Lead UX Designer to Product Manager — running roadmap, governance, vendor collaboration, and agile operations for a live platform serving 2,400+ users across Yale."
+company: "Yale University"
+role: "Product Manager"
+timeline: "2023 – Present"
+tags: ["Product Management", "Live Operations", "Governance", "Agile", "Platform Strategy"]
+coverImage: "/images/case-studies/yalesites-cover.png"
+order: 1
+---
+
+## Overview
+
+Building the YaleSites platform was a multi-year design and engineering effort. Running it as a live product turned out to be a different job entirely — one defined less by what I designed and more by how I made decisions, aligned stakeholders, and kept a shared platform moving forward for a community of 2,400+ active users across one of the country's most decentralized universities.
+
+When the platform launched and moved into operations, I transitioned from Lead UX Designer to Product Manager. That shift meant owning the roadmap, running quarterly governance with university leaders, managing vendor-unit collaborations that ship features to the whole community, and running the weekly agile loop that keeps development moving. This is what that work looks like.
+
+## The Challenge — Governing Without Authority
+
+Yale is intentionally decentralized. Departments aren't required to use YaleSites — they choose it. That means the platform has to earn adoption continuously, and decisions about what to build next can't be made unilaterally. Every prioritization call is a stakeholder alignment problem.
+
+To solve this, I established and run a governance committee — 10 to 12 unit leaders drawn from across the university, including the Office of Public Affairs and Communications, the University Printer, and directors from major units like FAS, Yale College, and West Campus. We meet quarterly. I present the roadmap, report on what shipped, and facilitate structured prioritization discussions about what comes next.
+
+<Quote cite="Reflection on the governance process">
+  The committee isn't a rubber stamp. These are senior people with competing priorities and different constituencies. My job is to walk in having already done the synthesis work — so the conversation moves productively rather than in circles.
+</Quote>
+
+<CaseStudyImage
+  src="/images/case-studies/yalesites-pm-governance-deck.png"
+  alt="Cover slide of the YaleSites Governance Committee presentation for March 2026, showing the Yale ITS branding"
+  caption="The quarterly governance deck — presented to 10–12 unit leaders from across the university"
+/>
+
+## How We Build New Features — The Collaborative Model
+
+The most distinctive aspect of how YaleSites operates is how major features get built. When a Yale unit has a significant need, they can bring a vendor to develop it — and when they do, I sit at the center of the collaboration to ensure the work benefits the entire platform community, not just the unit paying for it.
+
+### Case Study — It's Your Yale × Four Kitchens (YaleSites v2.0)
+
+It's Your Yale — Yale's central employee news and resource hub — needed substantially better content organization and navigation. They brought in Four Kitchens, a specialist web development firm, as their vendor. Over six months, that collaboration produced some of the most significant features in the platform's history: Content Collections (a full two-level navigation system), flexible multi-column section layouts, enhanced post content types with social sharing and estimated read time, and a redesigned block picker.
+
+My role throughout:
+
+- Worked with the It's Your Yale team to scope their needs and separate what was specific to their site from what could serve the whole community
+- Collaborated with Four Kitchens to review requirements and ensure features were architected for platform-wide use, not bespoke implementation
+- Coordinated with my internal development team to ensure compatibility, run QA, and manage integration into the core platform
+- Shaped the feature documentation and release communication so the broader community understood what shipped and how to use it
+
+This model has now been used across multiple collaborations — including partnerships with the Poorvu Center for Teaching and Learning, the School of Environment, and the Institution for Social and Policy Studies — each one adding features the entire YaleSites community now benefits from.
+
+<CaseStudyImage
+  src="/images/case-studies/yalesites-pm-iyy-content-collections.png"
+  alt="Screenshot of the It's Your Yale website showing the Content Collections navigation and new multi-column section layouts"
+  caption="It's Your Yale — Content Collections navigation and redesigned section layouts shipped via the IYY × Four Kitchens collaboration"
+/>
+
+## Day-to-Day — Running the Agile Loop
+
+Outside of governance and vendor collaborations, I run the weekly development process. The operational loop looks like this:
+
+<ProcessSteps steps={[
+  {
+    title: "Backlog Triage",
+    description: "Review and organize incoming community requests, bug reports, and internally identified issues into a prioritized backlog."
+  },
+  {
+    title: "Ticket Writing",
+    description: "Write and refine tickets with clear acceptance criteria, assigning work to developers and designers based on capacity and priority."
+  },
+  {
+    title: "Sprint Execution",
+    description: "Track progress through the sprint, unblock the team when things stall, and manage dependencies across internal and vendor work."
+  },
+  {
+    title: "QA & Release",
+    description: "Coordinate QA passes, stage releases, and manage core Drupal security updates — all without requiring action from individual departments."
+  },
+  {
+    title: "Community Communication",
+    description: "Draft release notes and training materials so the broader Yale community understands what shipped and how to use it."
+  }
+]} />
+
+In 2025, that process resulted in 5 major platform releases, fixes for 25 community-reported bugs and 113 internally caught issues, and continuous Drupal core security updates.
+
+<CaseStudyImage
+  src="/images/case-studies/yalesites-pm-board.png"
+  alt="YaleSites project board showing GitHub issues tracked across kanban columns: To Do, Blocked, In Progress, In Review, and Ready for Release"
+  caption="The YaleSites internal board — GitHub issues tracked kanban-style across the full sprint lifecycle"
+/>
+
+## Results
+
+<StatBlock stats={[
+  { value: "2,400+", label: "active users across Yale" },
+  { value: "449", label: "sites in development or production" },
+  { value: "900", label: "support requests completed in 2025" },
+]} />
+
+<CaseStudyImage
+  src="/images/case-studies/yalesites-pm-year-in-review.png"
+  alt="YaleSites 2025 Year in Review infographic showing 224 sites launched, 132 migrated from legacy, and 449 in development or production"
+  caption="YaleSites 2025 Year in Review — platform growth at a glance"
+/>
+
+<StatGroups groups={[
+  {
+    title: "Platform Growth",
+    stats: [
+      { value: "224", label: "new sites launched in 2025" },
+      { value: "132", label: "sites migrated from the legacy platform" },
+      { value: "449", label: "sites in development or production" },
+    ]
+  },
+  {
+    title: "Community Scale",
+    stats: [
+      { value: "2,400+", label: "active users across Yale" },
+      { value: "7 days", label: "average support resolution time" },
+      { value: "121", label: "people trained across 40 sessions" },
+    ]
+  },
+  {
+    title: "Delivery Cadence",
+    stats: [
+      { value: "5", label: "major feature releases shipped in 2025" },
+      { value: "3", label: "unit-vendor collaborations shipped platform-wide" },
+      { value: "138", label: "bugs resolved — 25 community-reported, 113 internal" },
+    ]
+  },
+]} />
+
+## Lessons Learned
+
+### Governance is a product.
+
+The quarterly committee didn't exist before I built it. Getting 10+ senior Yale leaders to show up consistently, engage seriously with prioritization, and trust the process required the same design thinking I applied to the platform itself — clear structure, visible progress, and making the right decision feel like the obvious one.
+
+### The most important constraint is platform integrity.
+
+When a unit brings a vendor and funding, there's natural pressure to ship what they want. My job is to hold the line on what makes something a platform feature versus a one-off customization — and to do it in a way that keeps the unit feeling heard, not blocked.
+
+### Live operations is its own discipline.
+
+Building the platform taught me how to design systems. Running it has taught me how to sustain them — how to keep stakeholders aligned, keep a community engaged, keep quality up, and keep shipping without burning out the team.
+
+> Running YaleSites is structurally similar to live service product management — a shared platform, a community of stakeholders with competing needs, a vendor ecosystem, and a quarterly release cadence. The domain is different. The job is not.

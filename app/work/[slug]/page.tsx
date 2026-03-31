@@ -12,13 +12,17 @@ import TableOfContents from '@/components/case-study/table-of-contents'
 import RelatedStudies from '@/components/case-study/related-studies'
 import ProcessSteps from '@/components/case-study/process-steps'
 import YouTubeEmbed from '@/components/case-study/youtube-embed'
+import StatGroups from '@/components/case-study/stat-groups'
+import Callout from '@/components/case-study/callout'
 
 const mdxComponents = {
   StatBlock,
   Quote,
   CaseStudyImage,
   ProcessSteps,
+  StatGroups,
   YouTubeEmbed,
+  Callout,
   // Override the default h2 renderer so every heading gets an id + anchor
   h2: MdxH2,
 }
@@ -100,7 +104,7 @@ export default async function CaseStudyPage({
 
         {/* Prose content — width matches the header above it exactly */}
         <div className="prose">
-          <MDXRemote source={content} components={mdxComponents} />
+          <MDXRemote source={content} components={mdxComponents} options={{ mdxOptions: { }, blockJS: false }} />
         </div>
 
       </div>

@@ -6,7 +6,7 @@ function RelatedCard({ study }: { study: CaseStudyMeta }) {
   return (
     <Link
       href={`/work/${study.slug}`}
-      className="group flex flex-col rounded-2xl border border-neutral-200 dark:border-neutral-700 overflow-hidden hover:border-neutral-300 dark:hover:border-neutral-600 hover:shadow-lg dark:hover:shadow-neutral-950/50 transition-all duration-300 bg-white dark:bg-neutral-900"
+      className="group flex flex-col rounded-2xl border border-neutral-200 dark:border-neutral-700 overflow-hidden hover:border-neutral-300 dark:hover:border-neutral-600 hover:shadow-lg dark:hover:shadow-neutral-950/50 transition-all duration-300 bg-white dark:bg-neutral-900 no-underline"
     >
       {/* Cover image / gradient placeholder */}
       <div className="aspect-video relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-neutral-900">
