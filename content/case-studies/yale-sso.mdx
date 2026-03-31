@@ -9,17 +9,6 @@ coverImage: "/images/case-studies/yale-sso-cover.jpg"
 order: 3
 ---
 
-export const researchStats = [
-  { value: "42%", label: "of help desk tickets were login or password-related" },
-  { value: "67%", label: "of users struggled with the mobile experience" },
-  { value: "12", label: "distinct accessibility barriers identified in audit" },
-]
-
-export const outcomeStats = [
-  { value: "38%", label: "Reduction in password-related help desk tickets" },
-  { value: "96%", label: "Task completion rate in post-launch testing" },
-  { value: "4.8 / 5", label: "User satisfaction rating post-launch" },
-]
 
 ## Overview
 
@@ -57,7 +46,11 @@ To understand the scope of the problem, I conducted a multi-method research appr
 
 ### Key Findings
 
-<StatBlock stats={researchStats} />
+<StatBlock stats={[
+  { value: "42%", label: "of help desk tickets were login or password-related" },
+  { value: "67%", label: "of users struggled with the mobile experience" },
+  { value: "12", label: "distinct accessibility barriers identified in audit" },
+]} />
 
 Users were most frustrated by:
 
@@ -139,7 +132,11 @@ A phased rollout enabled A/B comparison of login completion rates, time to succe
 
 ## Results
 
-<StatBlock stats={outcomeStats} />
+<StatBlock stats={[
+  { value: "38%", label: "Reduction in password-related help desk tickets" },
+  { value: "96%", label: "Task completion rate in post-launch testing" },
+  { value: "4.8 / 5", label: "User satisfaction rating post-launch" },
+]} />
 
 Beyond the metrics, the redesign had lasting organizational impact:
 

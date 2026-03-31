@@ -9,11 +9,6 @@ coverImage: "/images/case-studies/yale-duo-cover.jpg"
 order: 2
 ---
 
-export const outcomeStats = [
-  { value: "16,000+", label: "User responses collected in the feedback survey" },
-  { value: "4.6 / 5", label: "Average satisfaction rating from the community" },
-  { value: "0", label: "Compromised NetID accounts since launch" },
-]
 
 ## Overview
 
@@ -95,7 +90,11 @@ The final solution was a self-service opt-in webpage where users could learn wha
 
 ## Results
 
-<StatBlock stats={outcomeStats} />
+<StatBlock stats={[
+  { value: "16,000+", label: "User responses collected in the feedback survey" },
+  { value: "4.6 / 5", label: "Average satisfaction rating from the community" },
+  { value: "0", label: "Compromised NetID accounts since launch" },
+]} />
 
 User feedback collected at the end of the opt-in flow consistently highlighted words like **easy**, **simple**, **intuitive**, **clear**, and **straightforward** — a strong signal that a security-heavy process had been successfully made approachable.
 
