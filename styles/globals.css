@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 0 0% 9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 11%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Scroll padding accounts for sticky nav height (64px) so focused
+     elements are never hidden behind it — WCAG 2.4.11 */
+  html {
+    scroll-padding-top: 5rem;
+  }
+
+  /* Consistent, visible focus indicator — WCAG 2.4.7.
+     Uses :focus-visible so mouse users are unaffected. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-blue-600 ring-offset-2 ring-offset-white rounded-sm;
+  }
+
+  .dark :focus-visible {
+    @apply ring-blue-400 ring-offset-neutral-900;
+  }
+}
+
+/* ─── MDX Prose styles ──────────────────────────────────────────────────────
+   Applied to the wrapper div around MDXRemote content. Scoped so they don't
+   bleed into custom components (StatBlock, Quote) that opt out with their
+   own Tailwind classes. */
+@layer components {
+  .prose {
+    & h2 {
+      @apply font-display text-2xl text-neutral-950 dark:text-white mt-14 mb-4 leading-snug;
+    }
+    & h3 {
+      @apply font-sans text-lg font-semibold text-neutral-950 dark:text-white mt-10 mb-3;
+    }
+    & p {
+      @apply text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6 text-base;
+    }
+    & ul {
+      @apply list-disc list-outside ml-6 mb-6 space-y-2;
+    }
+    & ol {
+      @apply list-decimal list-outside ml-6 mb-6 space-y-2;
+    }
+    & li {
+      @apply text-neutral-700 dark:text-neutral-300 leading-relaxed;
+    }
+    & strong {
+      @apply font-semibold text-neutral-950 dark:text-white;
+    }
+    & a {
+      /* blue-600 on white = 5.1:1; blue-400 on neutral-900 = 7.4:1 — WCAG 1.4.3 AA */
+      @apply text-blue-600 dark:text-blue-400 underline underline-offset-2 hover:no-underline;
+    }
+    & blockquote {
+      @apply border-l-4 border-blue-600 pl-6 my-10 not-italic;
+    }
+    & blockquote p {
+      @apply text-xl font-display italic text-neutral-700 dark:text-neutral-300 mb-0;
+    }
+    & hr {
+      @apply border-neutral-200 dark:border-neutral-800 my-12;
+    }
+  }
+}
+
+/* ─── Global link transitions ───────────────────────────────────────────────
+   Smooth underline-offset animation for text anchor tags (not buttons).
+   The offset shifts 2px → 4px on hover for a subtle floating effect. */
+@layer utilities {
+  a:not([class*="px-"]):not([class*="rounded"]) {
+    transition: color 0.2s ease, text-underline-offset 0.2s ease;
+    text-underline-offset: 2px;
+  }
+  a:not([class*="px-"]):not([class*="rounded"]):hover {
+    text-underline-offset: 4px;
+  }
+}
+
+/* Respect prefers-reduced-motion for any CSS transitions/animations
+   that fall outside Framer Motion — WCAG 2.3.3 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

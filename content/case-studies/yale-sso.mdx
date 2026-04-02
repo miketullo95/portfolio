@@ -1,0 +1,160 @@
+---
+title: "Yale Single Sign-On"
+subtitle: "Creating a cohesive, accessible, and secure authentication experience for Yale's 35,000+ community members — redesigning the most-used page at the university from the ground up."
+company: "Yale University"
+role: "Lead UX Designer"
+timeline: "3 Months"
+tags: ["UX Design", "Accessibility", "Identity & Access Management"]
+coverImage: "/images/case-studies/yale-sso-cover.png"
+order: 5
+---
+
+
+## Overview
+
+The Yale Single Sign-On (SSO) system is the primary authentication gateway for the entire Yale community — serving over 35,000 students, faculty, and staff every day. As the digital front door to Yale's services, it needed to reflect Yale's brand identity, provide a seamless experience across devices, and maintain the highest security standards.
+
+I was tasked with redesigning the entire authentication flow: the login screen, password reset process, error handling, and account management interface. This project required balancing institutional requirements, security best practices, and user-centered design principles — at scale.
+
+<Quote cite="Initial user research findings">
+  The login page is the most frequently used page at Yale, yet it was failing to meet basic usability and accessibility standards.
+</Quote>
+
+## Problem Statement
+
+The existing Yale SSO system had accumulated years of technical debt and design inconsistency:
+
+- **Inconsistent branding** across different authentication screens
+- **Poor accessibility** creating real barriers for users with disabilities
+- **Unclear error messages** with no actionable recovery paths
+- **Limited responsive design** resulting in a frustrating mobile experience
+- **Difficult password reset flow** driving high support ticket volume
+
+These issues did not just create friction — they created security risk. When authentication is confusing, users find workarounds that undermine the system entirely.
+
+## User Research
+
+### Research Methodology
+
+To understand the scope of the problem, I conducted a multi-method research approach:
+
+- Reviewed 500+ help desk tickets related to login issues
+- Conducted contextual interviews with 15 users across students, faculty, and staff
+- Performed a full WCAG 2.1 AA accessibility audit of all authentication screens
+- Ran moderated usability testing with 8 participants, including users with disabilities
+- Analyzed authentication systems at peer institutions for competitive context
+
+### Key Findings
+
+<StatBlock stats={[
+  { value: "42%", label: "of help desk tickets were login or password-related" },
+  { value: "67%", label: "of users struggled with the mobile experience" },
+  { value: "12", label: "distinct accessibility barriers identified in audit" },
+]} />
+
+Users were most frustrated by:
+
+- **Error messages** that identified a problem but offered no path forward
+- **Password requirements** invisible until a rule was already broken
+- **Mobile navigation** requiring excessive zooming and horizontal scrolling
+- **Inconsistent visual cues** that left users uncertain they were on a legitimate Yale page
+- **Screen reader incompatibility** that made the flow entirely inaccessible for some users
+
+## Design Process
+
+The project moved through seven phases, each building on the last:
+
+1. **Define Requirements** — Collaborated with IT security, identity management, and accessibility experts to establish technical and compliance constraints
+2. **Information Architecture** — Mapped user flows for all authentication paths, including every edge case and error state
+3. **Wireframing** — Created low-fidelity wireframes focused on content hierarchy and interaction patterns
+4. **Visual Design** — Developed high-fidelity mockups aligned with Yale's brand while ensuring accessibility at every step
+5. **Prototyping** — Built interactive prototypes for user testing and stakeholder review
+6. **Testing & Iteration** — Conducted multiple rounds of usability testing and iterated based on findings
+7. **Implementation** — Worked closely with developers to maintain design fidelity and verify accessibility compliance in production
+
+### Design Principles
+
+Five principles guided every decision throughout the process:
+
+- **Accessibility first** — WCAG 2.1 AA compliance as a floor, not a ceiling
+- **Mobile responsiveness** — a consistent experience across all device sizes
+- **Clear communication** — helpful feedback and plain-language error messages
+- **Security without friction** — strong security that does not punish legitimate users
+- **Yale brand trust** — consistent visual identity that reinforces confidence
+
+<CaseStudyImage
+  src="/images/case-studies/yale-sso-login.png"
+  alt="Screenshot of the original Yale CAS login page before the redesign"
+  caption="The existing Yale CAS login page — inconsistent branding, poor mobile experience, limited accessibility"
+/>
+
+<CaseStudyImage
+  src="/images/case-studies/yale-sso-error.png"
+  alt="Screenshot of the original Yale CAS error state showing unclear error messaging"
+  caption="Original error handling — vague messages with no clear recovery path for users"
+/>
+
+## Solution
+
+### Redesigned Login Screen
+
+The new login screen featured clear Yale branding, a simplified layout focused on essential elements, prominent recovery options, full responsive design, and a keyboard-navigable high-contrast interface.
+
+### Improved Error Handling
+
+I completely redesigned the error messaging system to use plain language, provide actionable next steps, display errors inline next to relevant fields, use appropriate ARIA attributes for screen reader users, and maintain security without revealing unnecessary information.
+
+### Streamlined Password Reset
+
+The new password reset flow reduced steps from **7 to 4**, added real-time password requirement validation, included progress indicators for multi-step processes, offered multiple recovery options, and provided clear confirmation at each stage.
+
+### Account Management Dashboard
+
+A new self-service dashboard let users view and update profile information, manage security settings, configure recovery options, and monitor recent account activity — reducing reliance on the help desk for routine tasks.
+
+## Testing & Validation
+
+### Usability Testing
+
+Moderated usability tests with 12 participants covering standard login, error recovery, password reset, and account management. Participants represented diverse roles, technical skill levels, and accessibility needs.
+
+### Accessibility Testing
+
+Thorough testing with NVDA and VoiceOver screen readers, full keyboard navigation verification, color contrast analysis for all interactive states, testing with magnification tools up to 400%, and automated WCAG 2.1 AA compliance checks.
+
+### A/B Testing
+
+A phased rollout enabled A/B comparison of login completion rates, time to successful authentication, error recovery success rates, and support ticket generation rates.
+
+<Quote cite="Participant in usability testing">
+  The new SSO design is significantly more intuitive. I can finally use the password reset function without calling the help desk.
+</Quote>
+
+## Results
+
+<StatBlock stats={[
+  { value: "38%", label: "Reduction in password-related help desk tickets" },
+  { value: "96%", label: "Task completion rate in post-launch testing" },
+  { value: "4.8 / 5", label: "User satisfaction rating post-launch" },
+]} />
+
+Beyond the metrics, the redesign had lasting organizational impact:
+
+- The design system and components were adopted across other Yale web applications
+- The project received recognition from Yale's Office of Digital Accessibility
+- IT support reported significantly fewer escalations related to authentication
+- The redesigned system became the campus standard for authentication interfaces
+
+## Lessons Learned
+
+### Balancing Security and Usability
+
+The biggest ongoing tension was finding the right balance between security requirements and usable design. Close collaboration with the security team early revealed that most friction points were implementation choices — not security requirements — and many could be resolved without compromising protection.
+
+### Inclusive Design Benefits Everyone
+
+Prioritizing accessibility from the beginning created a system that was better for users with disabilities and noticeably better for all users — particularly in challenging contexts like mobile usage, poor network conditions, and unfamiliar devices.
+
+### The Importance of Error States
+
+Well-designed error states are disproportionately impactful on overall experience quality. Investing in clear, helpful error messaging was one of the highest-leverage design decisions in the entire project.
