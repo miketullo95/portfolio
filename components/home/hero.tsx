@@ -21,7 +21,7 @@ export default function Hero() {
             className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-4 tracking-widest uppercase"
             {...fadeUp(0)}
           >
-            Product Manager & UX Designer
+            Product Manager
           </motion.p>
 
           <motion.h1
@@ -35,9 +35,9 @@ export default function Hero() {
             className="text-lg text-neutral-600 dark:text-neutral-400 mb-10 leading-relaxed max-w-lg"
             {...fadeUp(0.2)}
           >
-            A PM and UX designer making higher ed a little less painful to navigate —
-            bringing a game design background, systems thinking, and a player-first
-            mindset to build things people actually want to use.
+            A PM with a game design background and UX depth — building platforms and
+            experiences that earn trust, reduce friction, and make people actually
+            want to use them.
           </motion.p>
 
           <motion.div className="flex gap-4" {...fadeUp(0.3)}>

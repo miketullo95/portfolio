@@ -57,16 +57,17 @@ export default function AboutContent() {
               className="font-display text-4xl md:text-5xl text-neutral-950 dark:text-white leading-tight mb-6"
               {...fadeUp(0.1)}
             >
-              Product thinker.<br />Game designer at heart.
+              Product thinker.<br />Platform builder. Game designer at heart.
             </motion.h1>
             <motion.p
               className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4 max-w-prose"
               {...fadeUp(0.2)}
             >
-              I&apos;m a Product Manager and UX Designer at Yale University, where I help build
-              the digital experiences that students, faculty, and staff rely on every day.
-              My path here started with a love of video games and took a few interesting
-              turns along the way.
+              I&apos;m a Product Manager at Yale University, where I own the roadmap,
+              governance, and operations of a shared web platform used by 2,400+ people
+              across one of the most decentralized universities in the country. My path
+              here started with game design — and the instincts I built there show up
+              in everything I do.
             </motion.p>
             <motion.p
               className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-prose"
@@ -198,6 +199,51 @@ export default function AboutContent() {
         </div>
       </section>
 
+      {/* ── The Gaming Connection ─────────────────────────────────── */}
+      <section
+        aria-labelledby="gaming-heading"
+        className="border-t border-neutral-200 dark:border-neutral-800 py-20"
+      >
+        <div className="mx-auto max-w-content px-6">
+          <motion.div {...fadeUp(0)}>
+            <p className="text-sm font-medium text-blue-600 dark:text-blue-400 tracking-widest uppercase mb-3">
+              The Gaming Connection
+            </p>
+            <h2
+              id="gaming-heading"
+              className="font-display text-3xl text-neutral-950 dark:text-white mb-10"
+            >
+              The domain is different. The job is not.
+            </h2>
+          </motion.div>
+
+          <div className="space-y-6 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+            <motion.p {...fadeUp(0.05)}>
+              My background is in game design. My day job is running a live platform at a
+              university. These are less different than they sound.
+            </motion.p>
+
+            <motion.p {...fadeUp(0.1)}>
+              Managing a platform that 2,400+ users depend on — where adoption is earned
+              not mandated, where stakeholders have competing priorities, and where new
+              features have to work for an entire community, not just the unit that funded
+              them — is structurally identical to live service product management. The
+              governance committee is a player council. The vendor collaborations are
+              partner studio integrations. The weekly agile loop is live ops.
+            </motion.p>
+
+            <motion.p {...fadeUp(0.15)}>
+              I&apos;ve spent twenty years as a World of Warcraft player, and the last several
+              years writing addons for it. I understand how game systems create player
+              behavior, what makes onboarding succeed or fail, and why friction in
+              authentication flows feels the same whether you&apos;re logging into a university
+              portal or a game client. I&apos;m not crossing into gaming from the outside.
+              I&apos;m coming home.
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
       {/* ── Beyond the screen ─────────────────────────────────────── */}
       <section
         aria-labelledby="personal-heading"
@@ -212,7 +258,7 @@ export default function AboutContent() {
               id="personal-heading"
               className="font-display text-3xl text-neutral-950 dark:text-white"
             >
-              When I&apos;m not designing
+              When I&apos;m not shipping
             </h2>
           </motion.div>
 

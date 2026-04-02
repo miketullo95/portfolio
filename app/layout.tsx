@@ -18,7 +18,7 @@ const lora = Lora({
 })
 
 export const metadata: Metadata = {
-  title: 'Mike Tullo | Product Manager & UX Designer',
+  title: 'Mike Tullo | Product Manager',
   description:
     'Portfolio of Mike Tullo — Product Manager and UX Designer with a background in game design and user experience.',
 }
