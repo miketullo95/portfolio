@@ -12,7 +12,7 @@ export default function StatGroups({ groups = [] }: { groups?: Group[] }) {
   if (!groups.length) return null
 
   return (
-    <div className="not-prose my-12 grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-200 dark:bg-neutral-800 rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800">
+    <div className="not-prose my-12 grid grid-cols-1 gap-px bg-neutral-200 dark:bg-neutral-800 rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800">
       {groups.map((group) => (
         <div
           key={group.title}
@@ -24,12 +24,12 @@ export default function StatGroups({ groups = [] }: { groups?: Group[] }) {
           </p>
 
           {/* Stats */}
-          <ul className="flex flex-col gap-5 list-none" aria-label={group.title}>
+          <ul className="flex flex-col gap-5 list-none [&>li]:list-none [&>li]:before:content-none [&>li]:pl-0" aria-label={group.title}>
             {group.stats.map(({ value, label }) => (
               <li key={label} aria-label={`${value} — ${label}`}>
                 <p
                   aria-hidden="true"
-                  className="font-display text-3xl font-bold text-neutral-950 dark:text-white leading-none mb-1"
+                  className="font-display text-5xl font-black text-blue-600 dark:text-blue-400 leading-none mb-1 tracking-tight"
                 >
                   {value}
                 </p>

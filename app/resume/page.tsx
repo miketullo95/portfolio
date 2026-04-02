@@ -17,10 +17,10 @@ const experience = [
     period: 'October 2024 – Present',
     current: true,
     bullets: [
-      'Spearheaded the YaleSites platform as Product Manager, orchestrating cross-functional teams of engineers, designers, and project managers to deliver a user-centric web platform used by 1,500+ Yale websites.',
-      'Led feature prioritization and roadmap development based on user research insights, balancing stakeholder needs with technical constraints.',
-      'Managed product backlog in Jira, efficiently organizing user stories, bugs, and feature requests to maximize team productivity.',
-      'Collaborated with multiple academic and administrative units across Yale to identify requirements, select and hire development vendors to contribute features back to the open-source platform.',
+      'Own the product roadmap and quarterly governance for YaleSites — a shared web platform serving 2,400+ active users across 449 sites at Yale. Facilitate a 10–12 member steering committee of university leaders to align prioritization across a decentralized institution with no central mandate.',
+      'Manage a collaborative vendor model where Yale units bring outside development partners to build platform features — scoping requirements to ensure work benefits the entire community, not just the sponsoring unit. Shipped 3 major unit-vendor collaborations as platform-wide releases in 2025.',
+      'Run the weekly agile development loop — backlog triage, ticket writing, sprint execution, QA, and release communication — resulting in 5 major platform releases and 138 bugs resolved in 2025.',
+      'Oversaw the platform foundation for YaleSites Beacon, an AI assistant built on the YaleSites Drupal platform, demonstrating how a shared platform can support AI-powered innovation while maintaining consistency and governance.',
     ],
   },
   {
@@ -28,7 +28,7 @@ const experience = [
     company: 'Yale University',
     location: 'New Haven, CT',
     period: 'July 2024 – Present',
-    current: true,
+    current: false,
     bullets: [
       'Mentored junior UX team members, providing guidance on user research methodologies and fostering professional growth.',
       'Led the LUX (lux.yale.edu) project as UX lead, facilitating wireframes, requirements gathering, and working with a complex data model.',
@@ -42,8 +42,8 @@ const experience = [
     period: 'September 2019 – July 2024',
     current: false,
     bullets: [
-      'Designed the experience and visual design for Yale SSO and account management — used by the entire Yale community daily.',
-      'Designed and delivered the Yale MFA Opt-In experience, reducing compromised NetID accounts to zero since launch.',
+      'Redesigned Yale\'s Single Sign-On system — the most-visited page at Yale, used by 35,000+ community members daily — improving accessibility to WCAG 2.1 AA, reducing password reset steps from 7 to 4, and significantly reducing help desk login escalations.',
+      'Designed the Yale MFA Opt-In experience for 20,000+ community members — reducing compromised NetID incidents to zero since launch in 2020 by reframing a forced security rollout as an empowering opt-in choice.',
     ],
   },
   {
@@ -91,6 +91,11 @@ const skills = [
       'Data-Driven Decision Making',
       'Metrics Definition',
       'Vendor Management',
+      'Roadmap Planning',
+      'Agile / Scrum',
+      'OKRs & Success Metrics',
+      'Live Operations',
+      'Governance & Stakeholder Alignment',
     ],
   },
   {
@@ -152,7 +157,7 @@ export default function ResumePage() {
               Mike Tullo
             </h1>
             <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-5">
-              Product Manager &amp; UX Designer
+              Product Manager
             </p>
             {/* Contact meta — <ul> so screen readers announce as a list — WCAG 1.3.1 */}
             <ul
@@ -166,10 +171,10 @@ export default function ResumePage() {
               <li className="flex items-center gap-1.5">
                 <Mail size={13} aria-hidden="true" />
                 <a
-                  href="mailto:mike@miketullo.com"
+                  href="mailto:miketullo95@gmail.com"
                   className="hover:text-neutral-950 dark:hover:text-white transition-colors underline underline-offset-2"
                 >
-                  mike@miketullo.com
+                  miketullo95@gmail.com
                 </a>
               </li>
             </ul>

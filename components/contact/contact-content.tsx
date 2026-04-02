@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Linkedin, Mail, Check, Copy } from 'lucide-react'
 
-const EMAIL = 'mike@miketullo.com'
+const EMAIL = 'miketullo95@gmail.com'
 const LINKEDIN_URL = 'https://linkedin.com/in/miketullo'
 
 export default function ContactContent() {

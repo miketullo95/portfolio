@@ -5,7 +5,7 @@ company: "Yale University"
 role: "Product Manager"
 timeline: "2023 – Present"
 tags: ["Product Management", "Live Operations", "Governance", "Agile", "Platform Strategy"]
-coverImage: "/images/case-studies/yalesites-cover.png"
+coverImage: "/images/case-studies/yalesites-pm-governance-deck.png"
 order: 1
 ---
 
@@ -53,6 +53,8 @@ This model has now been used across multiple collaborations — including partne
   alt="Screenshot of the It's Your Yale website showing the Content Collections navigation and new multi-column section layouts"
   caption="It's Your Yale — Content Collections navigation and redesigned section layouts shipped via the IYY × Four Kitchens collaboration"
 />
+
+[View the live site — your.yale.edu →](https://your.yale.edu)
 
 ## Day-to-Day — Running the Agile Loop
 
@@ -103,42 +105,42 @@ In 2025, that process resulted in 5 major platform releases, fixes for 25 commun
   caption="YaleSites 2025 Year in Review — platform growth at a glance"
 />
 
-<StatGroups groups={[
-  {
-    title: "Platform Growth",
-    stats: [
-      { value: "224", label: "new sites launched in 2025" },
-      { value: "132", label: "sites migrated from the legacy platform" },
-      { value: "449", label: "sites in development or production" },
-    ]
-  },
-  {
-    title: "Community Scale",
-    stats: [
-      { value: "2,400+", label: "active users across Yale" },
-      { value: "7 days", label: "average support resolution time" },
-      { value: "121", label: "people trained across 40 sessions" },
-    ]
-  },
-  {
-    title: "Delivery Cadence",
-    stats: [
-      { value: "5", label: "major feature releases shipped in 2025" },
-      { value: "3", label: "unit-vendor collaborations shipped platform-wide" },
-      { value: "138", label: "bugs resolved — 25 community-reported, 113 internal" },
-    ]
-  },
-]} />
+<div className="not-prose my-12 grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-200 dark:bg-neutral-800 rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800">
+  <div className="bg-white dark:bg-neutral-950 px-7 py-8 flex flex-col gap-6">
+    <p className="text-[11px] font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400">Platform Growth</p>
+    <div className="flex flex-col gap-5">
+      <div><p className="font-display text-6xl font-black text-blue-600 dark:text-blue-400 tracking-tight leading-none mb-1 tabular-nums">224</p><p className="text-sm text-neutral-500 dark:text-neutral-400 leading-snug">New sites launched in 2025</p></div>
+      <div><p className="font-display text-6xl font-black text-blue-600 dark:text-blue-400 tracking-tight leading-none mb-1 tabular-nums">132</p><p className="text-sm text-neutral-500 dark:text-neutral-400 leading-snug">Sites migrated from the legacy platform</p></div>
+      <div><p className="font-display text-6xl font-black text-blue-600 dark:text-blue-400 tracking-tight leading-none mb-1 tabular-nums">449</p><p className="text-sm text-neutral-500 dark:text-neutral-400 leading-snug">Sites in development or production</p></div>
+    </div>
+  </div>
+  <div className="bg-white dark:bg-neutral-950 px-7 py-8 flex flex-col gap-6">
+    <p className="text-[11px] font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400">Community Scale</p>
+    <div className="flex flex-col gap-5">
+      <div><p className="font-display text-6xl font-black text-blue-600 dark:text-blue-400 tracking-tight leading-none mb-1 tabular-nums">2,400+</p><p className="text-sm text-neutral-500 dark:text-neutral-400 leading-snug">Active users across Yale</p></div>
+      <div><p className="font-display text-6xl font-black text-blue-600 dark:text-blue-400 tracking-tight leading-none mb-1 tabular-nums">7 days</p><p className="text-sm text-neutral-500 dark:text-neutral-400 leading-snug">Average support resolution time</p></div>
+      <div><p className="font-display text-6xl font-black text-blue-600 dark:text-blue-400 tracking-tight leading-none mb-1 tabular-nums">121</p><p className="text-sm text-neutral-500 dark:text-neutral-400 leading-snug">People trained across 40 sessions</p></div>
+    </div>
+  </div>
+  <div className="bg-white dark:bg-neutral-950 px-7 py-8 flex flex-col gap-6">
+    <p className="text-[11px] font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400">Delivery Cadence</p>
+    <div className="flex flex-col gap-5">
+      <div><p className="font-display text-6xl font-black text-blue-600 dark:text-blue-400 tracking-tight leading-none mb-1 tabular-nums">5</p><p className="text-sm text-neutral-500 dark:text-neutral-400 leading-snug">Major feature releases shipped in 2025</p></div>
+      <div><p className="font-display text-6xl font-black text-blue-600 dark:text-blue-400 tracking-tight leading-none mb-1 tabular-nums">3</p><p className="text-sm text-neutral-500 dark:text-neutral-400 leading-snug">Unit-vendor collaborations shipped platform-wide</p></div>
+      <div><p className="font-display text-6xl font-black text-blue-600 dark:text-blue-400 tracking-tight leading-none mb-1 tabular-nums">138</p><p className="text-sm text-neutral-500 dark:text-neutral-400 leading-snug">Bugs resolved — 25 community-reported, 113 internal</p></div>
+    </div>
+  </div>
+</div>
 
 ## Lessons Learned
 
-### Governance is a product.
+### Lean on the governance committee early.
 
-The quarterly committee didn't exist before I built it. Getting 10+ senior Yale leaders to show up consistently, engage seriously with prioritization, and trust the process required the same design thinking I applied to the platform itself — clear structure, visible progress, and making the right decision feel like the obvious one.
+When hard decisions came up internally — prioritization calls, scope disagreements, whether something belonged on the roadmap — we found far more success bringing those questions to the governance committee than trying to resolve them in-house. The committee existed for exactly that purpose, and leaning into it meant decisions had institutional buy-in instead of just internal consensus.
 
-### The most important constraint is platform integrity.
+### "Platformizing" unit-funded features is the real work.
 
-When a unit brings a vendor and funding, there's natural pressure to ship what they want. My job is to hold the line on what makes something a platform feature versus a one-off customization — and to do it in a way that keeps the unit feeling heard, not blocked.
+When a unit brings a vendor and funding, they often come with a solution already in mind — one that works perfectly for their use case. The challenge isn't saying no. It's finding the platformized version of what they're asking for: a feature broad enough that other units across Yale could actually make sense of and use it. That requires deep university knowledge, because what looks like a reasonable one-off to the unit often duplicates or conflicts with patterns that already exist elsewhere in the community.
 
 ### Live operations is its own discipline.
 
