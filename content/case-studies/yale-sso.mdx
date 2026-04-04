@@ -1,6 +1,6 @@
 ---
 title: "Yale Single Sign-On"
-subtitle: "Creating a cohesive, accessible, and secure authentication experience for Yale's 35,000+ community members — redesigning the most-used page at the university from the ground up."
+subtitle: "Owning end-to-end redesign of Yale's primary authentication gateway — driving behavioral change at scale for 35,000+ daily users through cross-functional execution with security, identity management, and engineering."
 company: "Yale University"
 role: "Lead UX Designer"
 timeline: "3 Months"
@@ -12,9 +12,9 @@ order: 5
 
 ## Overview
 
-The Yale Single Sign-On (SSO) system is the primary authentication gateway for the entire Yale community — serving over 35,000 students, faculty, and staff every day. As the digital front door to Yale's services, it needed to reflect Yale's brand identity, provide a seamless experience across devices, and maintain the highest security standards.
+The Yale Single Sign-On (SSO) system is the primary authentication gateway for the entire Yale community — serving over 35,000 students, faculty, and staff every day. As the critical entry point to Yale's services, it had to be reliable, accessible, and trustworthy at institutional scale.
 
-I was tasked with redesigning the entire authentication flow: the login screen, password reset process, error handling, and account management interface. This project required balancing institutional requirements, security best practices, and user-centered design principles — at scale.
+I owned the end-to-end redesign of the authentication flow — login screen, password reset, error handling, and account management — coordinating across IT security, identity management, and engineering to deliver a more reliable, accessible experience without introducing risk to the infrastructure underpinning 35,000+ daily users.
 
 <Quote cite="Initial user research findings">
   The login page is the most frequently used page at Yale, yet it was failing to meet basic usability and accessibility standards.
@@ -64,13 +64,13 @@ Users were most frustrated by:
 
 The project moved through seven phases, each building on the last:
 
-1. **Define Requirements** — Collaborated with IT security, identity management, and accessibility experts to establish technical and compliance constraints
-2. **Information Architecture** — Mapped user flows for all authentication paths, including every edge case and error state
-3. **Wireframing** — Created low-fidelity wireframes focused on content hierarchy and interaction patterns
-4. **Visual Design** — Developed high-fidelity mockups aligned with Yale's brand while ensuring accessibility at every step
-5. **Prototyping** — Built interactive prototypes for user testing and stakeholder review
-6. **Testing & Iteration** — Conducted multiple rounds of usability testing and iterated based on findings
-7. **Implementation** — Worked closely with developers to maintain design fidelity and verify accessibility compliance in production
+1. **Define Requirements** — Collaborated with IT security, identity management, and accessibility experts to establish technical and compliance constraints before touching the interface
+2. **Flow Architecture** — Mapped user flows for all authentication paths, including every edge case and error state, to define the full behavior surface
+3. **Wireframing** — Created low-fidelity wireframes focused on interaction patterns and recovery paths across device types
+4. **Interface Specification** — Developed high-fidelity specifications aligned with Yale's brand and WCAG 2.1 AA compliance
+5. **Prototyping** — Built interactive prototypes for user testing and cross-functional stakeholder review with security and engineering
+6. **Testing & Iteration** — Conducted multiple rounds of usability testing and iterated based on findings across user roles and accessibility needs
+7. **Implementation** — Partnered with engineering to verify production fidelity, accessibility compliance, and behavioral correctness across all authentication paths
 
 ### Design Principles
 
@@ -132,6 +132,7 @@ A phased rollout enabled A/B comparison of login completion rates, time to succe
 
 ## Results
 
+{/* TODO: verify impact metric — Confirm the 38% reduction in help desk tickets with IT support data. Specific question: what was the absolute ticket volume before vs. after launch, and over what time window? */}
 <StatBlock stats={[
   { value: "38%", label: "Reduction in password-related help desk tickets" },
   { value: "96%", label: "Task completion rate in post-launch testing" },
@@ -140,10 +141,10 @@ A phased rollout enabled A/B comparison of login completion rates, time to succe
 
 Beyond the metrics, the redesign had lasting organizational impact:
 
-- The design system and components were adopted across other Yale web applications
+- The authentication flow patterns were adopted as the campus standard across other Yale web applications
 - The project received recognition from Yale's Office of Digital Accessibility
 - IT support reported significantly fewer escalations related to authentication
-- The redesigned system became the campus standard for authentication interfaces
+- Established a model for cross-functional delivery — security, identity management, engineering, and UX working from shared requirements rather than in sequence
 
 ## Lessons Learned
 

@@ -17,10 +17,11 @@ const experience = [
     period: 'October 2024 – Present',
     current: true,
     bullets: [
-      'Own the product roadmap and quarterly governance for YaleSites — a shared web platform serving 2,400+ active users across 449 sites at Yale. Facilitate a 10–12 member steering committee of university leaders to align prioritization across a decentralized institution with no central mandate.',
-      'Manage a collaborative vendor model where Yale units bring outside development partners to build platform features — scoping requirements to ensure work benefits the entire community, not just the sponsoring unit. Shipped 3 major unit-vendor collaborations as platform-wide releases in 2025.',
+      'Own the product roadmap and quarterly governance for YaleSites — a multi-tenant live platform serving 2,400+ active users across 449 sites at Yale. Facilitate a 10–12 member steering committee of university leaders to align service priorities across a decentralized institution with no central mandate.',
+      'Manage a collaborative vendor model where Yale units bring outside development partners to build platform features — scoping requirements to ensure work extends across the entire service community, not just the sponsoring unit. Shipped 3 major unit-vendor collaborations as platform-wide releases in 2025.',
+      // TODO: replace with impact metric — What was the change in platform reliability or deployment success rate after moving to this agile cadence? How did release velocity affect community adoption or support ticket volume?
       'Run the weekly agile development loop — backlog triage, ticket writing, sprint execution, QA, and release communication — resulting in 5 major platform releases and 138 bugs resolved in 2025.',
-      'Oversaw the platform foundation for YaleSites Beacon, an AI assistant built on the YaleSites Drupal platform, demonstrating how a shared platform can support AI-powered innovation while maintaining consistency and governance.',
+      'Oversaw product requirements for YaleSites Beacon — an AI-powered assistant built on the shared platform infrastructure. Balanced innovation with platform governance to ensure the capability could extend to 2,400+ users without fragmenting the platform experience or introducing service inconsistency.',
     ],
   },
   {
@@ -28,7 +29,7 @@ const experience = [
     company: 'Yale University',
     location: 'New Haven, CT',
     period: 'July 2024 – Present',
-    current: false,
+    current: true,
     bullets: [
       'Mentored junior UX team members, providing guidance on user research methodologies and fostering professional growth.',
       'Led the LUX (lux.yale.edu) project as UX lead, facilitating wireframes, requirements gathering, and working with a complex data model.',
@@ -95,6 +96,7 @@ const skills = [
       'Agile / Scrum',
       'OKRs & Success Metrics',
       'Live Operations',
+      'Distributed Platform Ownership',
       'Governance & Stakeholder Alignment',
     ],
   },
@@ -110,7 +112,7 @@ const skills = [
   },
   {
     category: 'Tools & Technologies',
-    items: ['Figma', 'Jira & Confluence', 'HTML/CSS', 'JavaScript', 'Data Analysis'],
+    items: ['Jira & Confluence', 'JavaScript', 'Data Analysis'],
   },
 ]
 
@@ -157,7 +159,7 @@ export default function ResumePage() {
               Mike Tullo
             </h1>
             <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-5">
-              Product Manager
+              Product Manager with a game design background — I think in systems, feedback loops, and the people inside them. Specializing in live platform operations, distributed service ownership, and cross-functional delivery at scale.
             </p>
             {/* Contact meta — <ul> so screen readers announce as a list — WCAG 1.3.1 */}
             <ul

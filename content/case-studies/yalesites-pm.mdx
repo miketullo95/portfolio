@@ -1,6 +1,6 @@
 ---
 title: "YaleSites — Operating a Platform at Scale"
-subtitle: "Transitioning from Lead UX Designer to Product Manager — running roadmap, governance, vendor collaboration, and agile operations for a live platform serving 2,400+ users across Yale."
+subtitle: "Transitioning from Lead UX Designer to Product Manager — owning roadmap, service delivery, cross-functional vendor coordination, and platform infrastructure governance for a multi-tenant live platform serving 2,400+ users across Yale."
 company: "Yale University"
 role: "Product Manager"
 timeline: "2023 – Present"
@@ -11,9 +11,9 @@ order: 1
 
 ## Overview
 
-Building the YaleSites platform was a multi-year design and engineering effort. Running it as a live product turned out to be a different job entirely — one defined less by what I designed and more by how I made decisions, aligned stakeholders, and kept a shared platform moving forward for a community of 2,400+ active users across one of the country's most decentralized universities.
+Building the YaleSites platform was a multi-year design and engineering effort. Running it as a distributed live platform service turned out to be a different job entirely — one defined less by what I designed and more by how I made decisions, aligned stakeholders, and kept a multi-tenant platform moving forward for a community of 2,400+ active users across one of the country's most decentralized universities.
 
-When the platform launched and moved into operations, I transitioned from Lead UX Designer to Product Manager. That shift meant owning the roadmap, running quarterly governance with university leaders, managing vendor-unit collaborations that ship features to the whole community, and running the weekly agile loop that keeps development moving. This is what that work looks like.
+When the platform launched and moved into operations, I transitioned from Lead UX Designer to Product Manager. That shift meant owning the roadmap, running quarterly governance with university leaders, coordinating cross-functionally across external vendor teams, internal engineering, and dozens of platform-consuming units — and running the weekly agile loop that keeps service delivery moving. This is what that work looks like.
 
 ## The Challenge — Governing Without Authority
 
@@ -41,12 +41,13 @@ It's Your Yale — Yale's central employee news and resource hub — needed subs
 
 My role throughout:
 
-- Worked with the It's Your Yale team to scope their needs and separate what was specific to their site from what could serve the whole community
-- Collaborated with Four Kitchens to review requirements and ensure features were architected for platform-wide use, not bespoke implementation
-- Coordinated with my internal development team to ensure compatibility, run QA, and manage integration into the core platform
+- Worked with the It's Your Yale team to scope their needs and separate what was specific to their site from what could serve the whole platform community
+- Collaborated with Four Kitchens to review requirements and ensure features were architected for platform-wide use, not bespoke implementation — keeping the platform surface consistent for all 2,400+ consumers
+- Coordinated simultaneously across three parties — the sponsoring university unit, the external vendor, and my internal platform engineering team — aligning on requirements, architecture, and delivery timelines throughout
+- Managed integration into the core platform: compatibility review, QA, and release sequencing across internal and vendor workstreams
 - Shaped the feature documentation and release communication so the broader community understood what shipped and how to use it
 
-This model has now been used across multiple collaborations — including partnerships with the Poorvu Center for Teaching and Learning, the School of Environment, and the Institution for Social and Policy Studies — each one adding features the entire YaleSites community now benefits from.
+This model has now been used across multiple collaborations — including partnerships with the Poorvu Center for Teaching and Learning, the School of Environment, and the Institution for Social and Policy Studies — each one adding features the entire YaleSites community now benefits from. Structurally, it mirrors studio or publishing coordination work: a shared service layer that multiple teams depend on, external partners bringing bespoke needs, and a platform owner who has to broker between what's right for one team and what's right for the whole.
 
 <CaseStudyImage
   src="/images/case-studies/yalesites-pm-iyy-content-collections.png"
@@ -83,6 +84,7 @@ Outside of governance and vendor collaborations, I run the weekly development pr
   }
 ]} />
 
+{/* TODO: replace with impact metric — What was the change in community support ticket volume or resolution time as release cadence improved? Did platform adoption (new sites launched) accelerate? */}
 In 2025, that process resulted in 5 major platform releases, fixes for 25 community-reported bugs and 113 internally caught issues, and continuous Drupal core security updates.
 
 <CaseStudyImage
@@ -96,6 +98,7 @@ In 2025, that process resulted in 5 major platform releases, fixes for 25 commun
 <StatBlock stats={[
   { value: "2,400+", label: "active users across Yale" },
   { value: "449", label: "sites in development or production" },
+  // TODO: replace with impact metric — What percentage of support requests were resolved without escalation? What was average resolution time, and did it improve year-over-year?
   { value: "900", label: "support requests completed in 2025" },
 ]} />
 
