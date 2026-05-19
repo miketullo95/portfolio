@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { Linkedin, Mail, Check, Copy } from 'lucide-react'
 
 const EMAIL = 'miketullo95@gmail.com'
-const LINKEDIN_URL = 'https://linkedin.com/in/miketullo'
+const LINKEDIN_URL = 'https://www.linkedin.com/in/michaeltullo/'
 
 export default function ContactContent() {
   const [copied, setCopied] = useState(false)
@@ -57,7 +57,7 @@ export default function ContactContent() {
               </div>
               <div>
                 <p className="font-semibold text-base leading-tight">LinkedIn</p>
-                <p className="text-sm text-blue-100 mt-0.5">linkedin.com/in/miketullo</p>
+                <p className="text-sm text-blue-100 mt-0.5">linkedin.com/in/michaeltullo</p>
               </div>
             </div>
             <span
